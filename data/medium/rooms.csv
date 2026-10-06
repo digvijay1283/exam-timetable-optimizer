@@ -1,0 +1,12 @@
+room_id,room_code,building,capacity,room_type,available
+R01,C101,Annex,50,classroom,true
+R02,C102,Science,70,classroom,true
+R03,C103,Main,80,classroom,true
+R04,C104,Annex,80,classroom,true
+R05,C105,Science,90,classroom,true
+R06,C106,Main,90,classroom,true
+R07,C107,Annex,100,classroom,true
+R08,H108,Science,120,hall,true
+R09,L109,Main,90,lab,true
+R10,L110,Annex,90,lab,true
+R11,L111,Science,90,lab,true

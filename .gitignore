@@ -1,0 +1,40 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.hypothesis/
+.coverage
+htmlcov/
+
+# Local databases and runtime state (SQLite WAL creates -wal/-shm files)
+*.db
+*.db-wal
+*.db-shm
+*.sqlite3
+backend/var/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+*.tsbuildinfo
+
+# Experiment outputs are regenerated from the fixed seeds in experiments/configs.
+# Re-run with: python -m app.analytics.run_all
+experiments/results/*
+experiments/figures/*
+!experiments/results/.gitkeep
+!experiments/figures/.gitkeep
+
+# Secrets and logs
+.env
+.env.*
+*.log
+
+# Editors, OS, tooling
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.claude/

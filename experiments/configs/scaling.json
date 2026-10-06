@@ -1,0 +1,11 @@
+{
+  "name": "scaling",
+  "description": "Behaviour and runtime across problem sizes (20 / 50 / 100 exams) with the PRD default GA parameters, against the reference schedulers. 10 seeds.",
+  "datasets": ["data/small", "data/medium", "data/large"],
+  "seeds": [42, 43, 44, 45, 46, 47, 48, 49, 50, 51],
+  "workers": 1,
+  "ga_defaults": {},
+  "configs": {"default": {}},
+  "baselines": ["greedy", "greedy_cost_aware", "randomized_greedy"],
+  "baseline_seeds": [42, 43, 44, 45, 46, 47, 48, 49, 50, 51]
+}

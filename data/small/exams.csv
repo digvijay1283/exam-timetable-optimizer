@@ -1,0 +1,21 @@
+exam_id,subject_code,subject_name,department,semester,duration_minutes,student_count,exam_type,priority
+EXM001,CSE301,CSE Core 1 (Sem III),CSE,III,180,22,practical,0
+EXM002,ECE301,ECE Core 1 (Sem III),ECE,III,180,33,theory,0
+EXM003,MECH301,MECH Core 1 (Sem III),MECH,III,180,10,theory,0
+EXM004,CIVIL301,CIVIL Core 1 (Sem III),CIVIL,III,180,29,theory,0
+EXM005,CSE501,CSE Core 1 (Sem V),CSE,V,180,19,theory,0
+EXM006,ECE501,ECE Core 1 (Sem V),ECE,V,180,27,theory,0
+EXM007,MECH501,MECH Core 1 (Sem V),MECH,V,120,35,theory,0
+EXM008,CIVIL501,CIVIL Core 1 (Sem V),CIVIL,V,120,28,theory,1
+EXM009,CSE302,CSE Core 2 (Sem III),CSE,III,180,23,theory,0
+EXM010,ECE302,ECE Core 2 (Sem III),ECE,III,180,33,theory,0
+EXM011,MECH302,MECH Core 2 (Sem III),MECH,III,180,8,theory,1
+EXM012,CIVIL302,CIVIL Core 2 (Sem III),CIVIL,III,120,27,theory,0
+EXM013,CSE502,CSE Core 2 (Sem V),CSE,V,180,19,theory,0
+EXM014,ECE502,ECE Core 2 (Sem V),ECE,V,180,24,practical,0
+EXM015,CSEE01,CSE Elective 1,CSE,III,120,56,theory,0
+EXM016,ECEE02,ECE Elective 2,ECE,V,180,57,theory,0
+EXM017,MECHE03,MECH Elective 3,MECH,III,120,32,theory,1
+EXM018,CIVILE04,CIVIL Elective 4,CIVIL,V,180,89,theory,0
+EXM019,CSEE05,CSE Elective 5,CSE,III,120,28,theory,0
+EXM020,ECEE06,ECE Elective 6,ECE,V,120,54,theory,0

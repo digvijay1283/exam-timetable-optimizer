@@ -1,0 +1,10 @@
+[project]
+name = "exam-timetable-optimizer"
+version = "0.1.0"
+description = "Constraint-aware Genetic Algorithm for examination timetable generation"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,15 @@
+{
+  "name": "sensitivity",
+  "description": "One-factor-at-a-time parameter sensitivity on the medium dataset (Architecture section 24). Each factor is varied while the others stay at the PRD defaults; 10 seeds per setting.",
+  "datasets": ["data/medium"],
+  "seeds": [42, 43, 44, 45, 46, 47, 48, 49, 50, 51],
+  "ga_defaults": {},
+  "configs": {"default": {}},
+  "sweep": {
+    "population_size": [50, 100, 150, 200],
+    "mutation_rate": [0.05, 0.10, 0.20, 0.30],
+    "crossover_rate": [0.60, 0.80, 0.90],
+    "generations": [100, 200, 300, 500]
+  },
+  "baselines": []
+}

@@ -1,0 +1,16 @@
+{
+  "name": "ablation",
+  "description": "Contribution of each GA component on the medium dataset: the full GA against variants with the repair operator weakened or removed, a different crossover, and crossover or mutation switched off. 10 seeds each.",
+  "datasets": ["data/medium"],
+  "seeds": [42, 43, 44, 45, 46, 47, 48, 49, 50, 51],
+  "ga_defaults": {},
+  "configs": {
+    "default": {},
+    "repair_random": {"repair_mode": "random"},
+    "no_repair": {"repair": false},
+    "two_point_crossover": {"crossover_type": "two_point"},
+    "no_crossover": {"crossover_rate": 0.0},
+    "no_mutation": {"mutation_rate": 0.0}
+  },
+  "baselines": []
+}

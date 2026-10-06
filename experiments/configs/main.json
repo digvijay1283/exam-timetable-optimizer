@@ -1,0 +1,10 @@
+{
+  "name": "main",
+  "description": "Headline comparison on the medium dataset (50 exams, 500 students): GA with the PRD default parameters vs. four reference schedulers, 10 seeds.",
+  "datasets": ["data/medium"],
+  "seeds": [42, 43, 44, 45, 46, 47, 48, 49, 50, 51],
+  "ga_defaults": {},
+  "configs": {"default": {}},
+  "baselines": ["greedy", "greedy_cost_aware", "randomized_greedy", "random_feasible"],
+  "baseline_seeds": [42, 43, 44, 45, 46, 47, 48, 49, 50, 51]
+}
