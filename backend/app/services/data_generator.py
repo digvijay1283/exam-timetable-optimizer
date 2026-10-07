@@ -39,6 +39,7 @@ class GeneratorConfig:
     slots_per_day: int = 2
     start_date: date = date(2026, 11, 20)
     slack: float = 1.4  # slots = ceil(slack x greedy-colouring slots)
+    day_slack: float = 1.2  # exam days = ceil(day_slack x greedy-colouring classes) (one exam per student per day)
     core_fraction: float = 0.7
     practical_fraction: float = 0.1
     backlog_prob: float = 0.10
@@ -204,7 +205,9 @@ def generate_dataset(cfg: GeneratorConfig) -> Dataset:
     clique = greedy_clique_size(conflict)
     classes = [[int(i) for i in np.flatnonzero(colors == c)] for c in range(n_colors)]
 
-    min_slots = max(math.ceil(cfg.slack * n_colors), clique + 1, 2 * cfg.slots_per_day)
+    # Exams sharing students must also fall on different days, so each colour class needs a day.
+    min_days = max(math.ceil(cfg.day_slack * n_colors), clique + 1)
+    min_slots = max(math.ceil(cfg.slack * n_colors), clique + 1, 2 * cfg.slots_per_day, min_days * cfg.slots_per_day)
     slots = generate_slots(cfg.start_date, slots_per_day=cfg.slots_per_day, min_slots=min_slots)
     slot_len = min(s.duration_minutes for s in slots)
 

@@ -28,13 +28,17 @@ class ValidationResult:
     unavailable_rooms: int
     room_type_mismatches: int
     duration_violations: int
+    same_day_conflicts: int = 0
     details: tuple[str, ...] = ()
 
     def to_dict(self) -> dict:
         return asdict(self)
 
 
-def validate_timetable(dataset: Dataset, assignments: Iterable[tuple[str, str, str]]) -> ValidationResult:
+def validate_timetable(
+    dataset: Dataset, assignments: Iterable[tuple[str, str, str]], one_exam_per_day: bool = True
+) -> ValidationResult:
+    """Check every hard constraint. `one_exam_per_day` enables H8 (see ConstraintParams)."""
     exams = {e.exam_id: e for e in dataset.exams}
     rooms = {r.room_id: r for r in dataset.rooms}
     slots = {s.slot_id: s for s in dataset.slots}
@@ -101,18 +105,22 @@ def validate_timetable(dataset: Dataset, assignments: Iterable[tuple[str, str, s
         if exam_id in placed:
             exams_of_student[student_id].append(exam_id)
     shared: dict[tuple[str, str, str], int] = defaultdict(int)
+    shared_day: dict[tuple[str, str, str], int] = defaultdict(int)
     for student_exams in exams_of_student.values():
-        by_slot: dict[str, list[str]] = defaultdict(list)
-        for exam_id in student_exams:
-            by_slot[placed[exam_id][0].slot_id].append(exam_id)
-        for slot_id, same_slot in by_slot.items():
-            for a, b in combinations(sorted(same_slot), 2):
-                shared[(a, b, slot_id)] += 1
+        for a, b in combinations(sorted(student_exams), 2):
+            slot_a, slot_b = placed[a][0], placed[b][0]
+            if slot_a.slot_id == slot_b.slot_id:
+                shared[(a, b, slot_a.slot_id)] += 1
+            elif one_exam_per_day and slot_a.date == slot_b.date:
+                shared_day[(a, b, slot_a.date.isoformat())] += 1
     student_conflicts = sum(shared.values())
+    same_day = sum(shared_day.values())
     for (a, b, slot_id), n in sorted(shared.items()):
         details.append(f"{a} and {b} share {n} student(s) in slot {slot_id}")
+    for (a, b, day), n in sorted(shared_day.items()):
+        details.append(f"{a} and {b} share {n} student(s) on the same day ({day})")
 
-    hard = student_conflicts + room_conflicts + capacity + unassigned + unavailable + mismatch + too_long
+    hard = student_conflicts + room_conflicts + capacity + unassigned + unavailable + mismatch + too_long + same_day
     if len(details) > MAX_DETAILS:
         extra = len(details) - MAX_DETAILS
         details = details[:MAX_DETAILS] + [f"... and {extra} more"]
@@ -126,5 +134,6 @@ def validate_timetable(dataset: Dataset, assignments: Iterable[tuple[str, str, s
         unavailable_rooms=unavailable,
         room_type_mismatches=mismatch,
         duration_violations=too_long,
+        same_day_conflicts=same_day,
         details=tuple(details),
     )

@@ -1,19 +1,19 @@
 import { useMemo, useState } from "react";
 import { api } from "../api";
-import type { Entry, SessionDetail, Validation } from "../types";
-import { Chip, Empty, ErrorNotice, Notice, Panel, Stat, fmt, useAsync } from "../ui";
+import type { Entry, Page, SessionDetail, Validation } from "../types";
+import { Chip, Empty, ErrorNotice, Icon, Notice, PageHead, Panel, Stat, fmt, useAsync } from "../ui";
 
 const hue = (index: number) => (index * 47 + 200) % 360;
 const deptStyle = (i: number) =>
-  ({ "--c": `hsl(${hue(i)} 48% 36%)`, "--bg": `hsl(${hue(i)} 55% 95%)` }) as React.CSSProperties;
+  ({ "--c": `hsl(${hue(i)} 55% 42%)`, "--bg-c": `hsl(${hue(i)} 60% 50% / 0.1)` }) as React.CSSProperties;
 
 const dayLabel = (iso: string) => {
   const d = new Date(iso + "T00:00:00");
   return { weekday: d.toLocaleDateString("en-GB", { weekday: "short" }), date: d.toLocaleDateString("en-GB", { day: "numeric", month: "short" }) };
 };
 
-export function TimetablePage({ session, selectedId, onSelect, onChanged }: {
-  session: SessionDetail | null; selectedId: number | null; onSelect: (id: number) => void; onChanged: () => void;
+export function TimetablePage({ session, go, selectedId, onSelect, onChanged }: {
+  session: SessionDetail | null; go: (page: Page) => void; selectedId: number | null; onSelect: (id: number) => void; onChanged: () => void;
 }) {
   const [filters, setFilters] = useState({ department: "", semester: "", date: "", room: "", subject: "" });
   const [view, setView] = useState<"grid" | "list">("grid");
@@ -31,8 +31,16 @@ export function TimetablePage({ session, selectedId, onSelect, onChanged }: {
   }, [all.data]);
   const deptIndex = (d: string) => options.dept.indexOf(d);
 
-  if (!session) return <Empty>Create a session on the Data tab first.</Empty>;
-  if (!list.data?.length) return <Empty>No timetables yet. Run an optimization to generate one.</Empty>;
+  const head = (
+    <PageHead step="Step 3 of 3" title="Review and export">
+      Check the timetable, approve the version you want to publish, and download it as Excel or CSV.
+    </PageHead>
+  );
+  if (!session || (!list.loading && !list.data?.length)) {
+    return <>{head}<Empty action={<button className="btn primary" onClick={() => go("optimize")}>Go to step 2: Optimize</button>}>
+      No timetable yet. Run the optimizer to create one.</Empty></>;
+  }
+  if (!list.data) return head;
 
   const t = detail.data;
   const act = async (job: () => Promise<unknown>) => {
@@ -42,57 +50,59 @@ export function TimetablePage({ session, selectedId, onSelect, onChanged }: {
 
   return (
     <>
-      <div className="page-head">
-        <h1>Timetable</h1>
-        <select className="input" style={{ width: "auto" }} value={id ?? ""} onChange={(e) => { onSelect(Number(e.target.value)); setValidation(null); }}>
+      {head}
+      <div className="row">
+        <label className="muted" htmlFor="tt-pick">Version</label>
+        <select id="tt-pick" className="input" style={{ width: "auto", maxWidth: "100%" }} value={id ?? ""} onChange={(e) => { onSelect(Number(e.target.value)); setValidation(null); }}>
           {list.data.map((x) => <option key={x.id} value={x.id}>#{x.id} · {x.name}</option>)}
         </select>
-        {t && <Chip tone={t.status === "approved" ? "ok" : t.status === "infeasible" ? "bad" : "info"}>{t.status}</Chip>}
+        {t && <Chip tone={t.status === "approved" ? "ok" : t.status === "infeasible" ? "bad" : "info"}>{t.status === "approved" ? "Approved" : t.status === "infeasible" ? "Has rule violations" : "Draft"}</Chip>}
         <span className="spacer" />
         {t && (
           <div className="row">
-            <button className="btn" onClick={() => act(async () => setValidation(await api.validateTimetable(t.id)))}>Validate</button>
-            <button className="btn primary" disabled={t.hard_violations > 0 || t.status === "approved"}
+            <button className="btn" title="Re-check every must-have rule from scratch" onClick={() => act(async () => setValidation(await api.validateTimetable(t.id)))}>Check rules</button>
+            <button className="btn primary" title="Mark this as the final version" disabled={t.hard_violations > 0 || t.status === "approved"}
               onClick={() => act(async () => { await api.approve(t.id); await detail.reload(); await list.reload(); onChanged(); })}>
-              {t.status === "approved" ? "Approved" : "Approve"}</button>
-            <a className={`btn ${t.hard_violations > 0 ? "disabled" : ""}`} href={`/api/export/${t.id}/csv`} aria-disabled={t.hard_violations > 0}>CSV</a>
-            <a className="btn" href={`/api/export/${t.id}/xlsx`} aria-disabled={t.hard_violations > 0}>Excel</a>
+              {t.status === "approved" ? <><Icon name="check" size={16} /> Approved</> : "Approve"}</button>
+            <a className="btn" href={`/api/export/${t.id}/xlsx`} aria-disabled={t.hard_violations > 0}><Icon name="download" size={16} /> Excel</a>
+            <a className="btn" href={`/api/export/${t.id}/csv`} aria-disabled={t.hard_violations > 0}><Icon name="download" size={16} /> CSV</a>
           </div>
         )}
       </div>
 
       {t && (
         <div className="stats">
-          <Stat label="Exams" value={t.total_entries} />
-          <Stat label="Hard violations" value={t.hard_violations} tone={t.hard_violations ? "bad" : "ok"} />
-          <Stat label="Penalty" value={fmt(t.penalty)} />
-          <Stat label="Fitness" value={t.fitness.toExponential(2)} />
-          <Stat label="Back-to-back" value={fmt(t.breakdown.consecutive)} />
-          <Stat label="Short gaps" value={fmt(t.breakdown.short_gaps)} />
+          <Stat label="Exams scheduled" value={t.total_entries} />
+          <Stat label="Rule violations" hint="Must be 0" value={t.hard_violations} tone={t.hard_violations ? "bad" : "ok"} />
+          <Stat label="Penalty score" hint="Lower is better" value={fmt(t.penalty)} />
+          <Stat label="Exams on consecutive days" hint="Fewer is better" value={fmt(t.breakdown.short_gaps)} />
         </div>
       )}
 
       <ErrorNotice error={error} />
+      {t && t.hard_violations > 0 && <Notice tone="bad" title="This timetable breaks some must-have rules, so it can't be approved or exported. Run the optimizer again with more rounds." />}
       {validation && (validation.valid
-        ? <Notice tone="ok" title="Valid: no student clashes, room collisions or capacity problems." />
-        : <Notice tone="bad" title={`${validation.hard_violations} hard violation(s)`} items={validation.details} />)}
+        ? <Notice tone="ok" title="All rules pass: no student has two exams at once or two exams in one day, no room is double-booked, and every room is big enough." />
+        : <Notice tone="bad" title={`${validation.hard_violations} rule violation(s) found`} items={validation.details} />)}
 
-      <Panel flush title="Schedule" note={t ? `${t.entries.length} of ${t.total_entries} exams shown` : undefined}
+      <Panel flush title="Schedule" note={t ? `Showing ${t.entries.length} of ${t.total_entries} exams · hover an exam for details` : undefined}
         actions={<div className="seg" role="group" aria-label="View">
           <button aria-pressed={view === "grid"} onClick={() => setView("grid")}>Grid</button>
           <button aria-pressed={view === "list"} onClick={() => setView("list")}>List</button></div>}>
-        <div className="row" style={{ padding: "10px 14px", borderBottom: "1px solid var(--rule)" }}>
+        <div className="row" style={{ padding: "12px 20px", borderBottom: "1px solid var(--rule)" }}>
+          <span className="muted small">Filter:</span>
           <Filter label="Department" value={filters.department} options={options.dept} onChange={(v) => setFilters({ ...filters, department: v })} />
           <Filter label="Semester" value={filters.semester} options={options.sem} onChange={(v) => setFilters({ ...filters, semester: v })} />
           <Filter label="Date" value={filters.date} options={options.date} onChange={(v) => setFilters({ ...filters, date: v })} />
           <Filter label="Room" value={filters.room} options={options.room} onChange={(v) => setFilters({ ...filters, room: v })} />
-          <input className="input" style={{ width: 150 }} placeholder="Search subject" value={filters.subject}
+          <input className="input" style={{ width: 180 }} placeholder="Search subject…" value={filters.subject}
             onChange={(e) => setFilters({ ...filters, subject: e.target.value })} aria-label="Search subject" />
-          {Object.values(filters).some(Boolean) && <button className="btn sm" onClick={() => setFilters({ department: "", semester: "", date: "", room: "", subject: "" })}>Clear</button>}
+          {Object.values(filters).some(Boolean) && <button className="btn sm" onClick={() => setFilters({ department: "", semester: "", date: "", room: "", subject: "" })}>Clear filters</button>}
         </div>
         {!t ? null : t.entries.length === 0 ? <Empty>No exams match these filters.</Empty>
           : view === "grid" ? <Grid entries={t.entries} deptIndex={deptIndex} /> : <List entries={t.entries} />}
-        <div className="legend" style={{ padding: "10px 14px", borderTop: "1px solid var(--rule)" }}>
+        <div className="legend" style={{ padding: "12px 20px", borderTop: "1px solid var(--rule)" }}>
+          <span>Departments:</span>
           {options.dept.map((d, i) => <span key={d} style={deptStyle(i)}><i />{d}</span>)}
         </div>
       </Panel>
@@ -125,8 +135,9 @@ function Grid({ entries, deptIndex }: { entries: Entry[]; deptIndex: (d: string)
               <div className="tt-cell" key={start}>
                 {entries.filter((e) => e.date === day && e.start_time === start).map((e) => (
                   <div className="exam" style={deptStyle(deptIndex(e.department))} key={e.exam_id}
-                    title={`${e.subject_name}\n${e.department} · semester ${e.semester}\n${e.students} students · ${e.room_code}, ${e.building}`}>
-                    <b>{e.subject_code}</b><span>{e.room_code} · {e.students}</span>
+                    title={`${e.subject_name} (${e.subject_code})\n${e.department} · semester ${e.semester}\n${e.students} students · room ${e.room_code}, ${e.building}`}>
+                    <b>{e.subject_name}</b>
+                    <span>{e.subject_code} · Room {e.room_code} · {e.students} students</span>
                   </div>
                 ))}
               </div>
@@ -147,7 +158,7 @@ function List({ entries }: { entries: Entry[] }) {
         return (
           <tr key={e.exam_id}>
             <td>{weekday} {date}</td><td>{e.start_time.slice(0, 5)}–{e.end_time.slice(0, 5)}</td>
-            <td><b>{e.subject_code}</b> <span className="muted">{e.subject_name}</span></td>
+            <td><b>{e.subject_name}</b> <span className="muted">{e.subject_code}</span></td>
             <td>{e.department}</td><td>{e.semester}</td><td>{e.room_code}</td><td className="num">{e.students}</td>
           </tr>);
       })}</tbody>

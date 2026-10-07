@@ -38,7 +38,7 @@ export interface TimetableDetail extends TimetableSummary { entries: Entry[]; to
 export interface Validation {
   valid: boolean; hard_violations: number; student_conflicts: number; room_conflicts: number;
   capacity_violations: number; unassigned: number; unavailable_rooms: number;
-  room_type_mismatches: number; duration_violations: number; details: string[];
+  room_type_mismatches: number; duration_violations: number; same_day_conflicts: number; details: string[];
 }
 
 export interface ExperimentSummary {
@@ -51,3 +51,13 @@ export interface ExperimentDetail {
   convergence: Record<string, Record<string, { mean: number[]; std: number[]; seeds: number }>>;
   figures: string[];
 }
+
+export type Page = "overview" | "data" | "optimize" | "timetable" | "experiments";
+
+/** Where a session is in the add data → optimize → review workflow. */
+export const progressOf = (s: SessionDetail | null) => {
+  const c = s?.counts;
+  const data = !!c && c.exams > 0 && c.students > 0 && c.enrollments > 0 && c.rooms > 0 && c.slots > 0;
+  const optimized = !!c && c.timetables > 0;
+  return { data, optimized, next: (!data ? "data" : !optimized ? "optimize" : "timetable") as Page };
+};

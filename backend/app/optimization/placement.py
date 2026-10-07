@@ -13,6 +13,7 @@ import numpy as np
 from app.optimization.context import OptimizationContext
 
 SlotMode = Literal["random", "best", "first"]
+EXPLORE_SPAN = 3  # violations within which fallback slots are chosen at random when exploring
 
 
 class Occupancy:
@@ -20,6 +21,7 @@ class Occupancy:
         self.ctx = ctx
         n, s, r = ctx.n_exams, ctx.n_slots, ctx.n_rooms
         self.clash = np.zeros((n, s), dtype=np.int64)  # students exam i shares with exams placed in slot s
+        self.day_clash = np.zeros((n, ctx.n_days), dtype=np.int64)  # ... with exams placed on day d
         self.room_count = np.zeros((s, r), dtype=np.int64)
         self.day_count = np.zeros(ctx.n_days, dtype=np.int64)
         self.slot_of = np.full(n, -1, dtype=np.int64)
@@ -28,6 +30,7 @@ class Occupancy:
     def place(self, i: int, s: int, r: int) -> None:
         self.slot_of[i], self.room_of[i] = s, r
         self.clash[:, s] += self.ctx.conflict[:, i]
+        self.day_clash[:, self.ctx.slot_day_index[s]] += self.ctx.conflict[:, i]
         if r >= 0:
             self.room_count[s, r] += 1
         self.day_count[self.ctx.slot_day_index[s]] += 1
@@ -37,16 +40,24 @@ class Occupancy:
         if s < 0:
             return
         self.clash[:, s] -= self.ctx.conflict[:, i]
+        self.day_clash[:, self.ctx.slot_day_index[s]] -= self.ctx.conflict[:, i]
         if r >= 0:
             self.room_count[s, r] -= 1
         self.day_count[self.ctx.slot_day_index[s]] -= 1
         self.slot_of[i], self.room_of[i] = -1, -1
 
+    def student_clash(self, i: int) -> np.ndarray:
+        """Hard student violations of putting exam i into each slot: shared students in that slot,
+        plus (under H8) shared students elsewhere on the same day."""
+        if not self.ctx.params.one_exam_per_day:
+            return self.clash[i]
+        return self.day_clash[i, self.ctx.slot_day_index]
+
     def feasible_slots(self, i: int) -> np.ndarray:
         """Slots where exam i fits in time, clashes with nobody and still has a free suitable room."""
         ctx = self.ctx
         free_room = (ctx.room_ok[i][None, :] & (self.room_count == 0)).any(axis=1)
-        return ctx.slot_ok[i] & (self.clash[i] == 0) & free_room
+        return ctx.slot_ok[i] & (self.student_clash(i) == 0) & free_room
 
     def best_fit_room(self, i: int, s: int) -> int:
         """Smallest sufficient free room for exam i in slot s, or -1."""
@@ -71,12 +82,16 @@ class Occupancy:
         return cost + w.distribution * over
 
 
-def choose_placement(occ: Occupancy, i: int, rng: np.random.Generator, mode: SlotMode = "random") -> tuple[int, int]:
+def choose_placement(
+    occ: Occupancy, i: int, rng: np.random.Generator, mode: SlotMode = "random", explore: bool = False
+) -> tuple[int, int]:
     """Pick (slot, room) for exam i.
 
     mode: "random" a random feasible slot; "best" the feasible slot with least incremental soft
     penalty (random tie-break); "first" the earliest feasible slot. If no slot is fully feasible
-    the least-violating slot is used and the leftover violation is left to the penalty.
+    the least-violating slot is used and the leftover violation is left to the penalty. With
+    `explore` (used by repair), slots within a few violations of the least-violating one compete at
+    random, so repair can push a clashing neighbour out instead of cycling in a local minimum.
     """
     ctx = occ.ctx
     feasible = np.flatnonzero(occ.feasible_slots(i))
@@ -93,8 +108,9 @@ def choose_placement(occ: Occupancy, i: int, rng: np.random.Generator, mode: Slo
     # No fully feasible slot: minimise (hard violations, soft cost) among the slots that fit in time.
     fits = ctx.slot_ok[i] if ctx.slot_ok[i].any() else np.ones(ctx.n_slots, dtype=bool)
     has_room = (ctx.room_ok[i][None, :] & (occ.room_count == 0)).any(axis=1)
-    cost = ctx.weights.hard * (occ.clash[i] + (~has_room)) + occ.soft_cost(i)
-    cost = np.where(fits, cost, np.inf) + rng.random(ctx.n_slots) * 1e-6
+    cost = ctx.weights.hard * (occ.student_clash(i) + (~has_room)) + occ.soft_cost(i)
+    noise = ctx.weights.hard * EXPLORE_SPAN if explore else 1e-6
+    cost = np.where(fits, cost, np.inf) + rng.random(ctx.n_slots) * noise
     s = int(np.argmin(cost))
     r = occ.best_fit_room(i, s)
     if r < 0:  # every suitable room is taken in this slot: share the smallest suitable one

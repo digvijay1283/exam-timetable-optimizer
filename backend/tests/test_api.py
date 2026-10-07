@@ -70,7 +70,7 @@ def test_session_validation(client):
 
 def test_load_sample_and_validate_data(client, loaded):
     detail = client.get(f"/api/sessions/{loaded}").json()
-    assert detail["counts"]["exams"] == 20 and detail["counts"]["slots"] == 14
+    assert detail["counts"]["exams"] == 20 and detail["counts"]["slots"] == 24
     check = client.post(f"/api/sessions/{loaded}/validate").json()
     assert check["ok"] and not check["errors"]
     assert check["stats"]["exams"] == 20 and check["stats"]["greedy_slots_needed"] <= check["stats"]["slots"]

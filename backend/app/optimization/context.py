@@ -47,6 +47,7 @@ class OptimizationContext:
     slot_ok: np.ndarray  # (n_exams, n_slots) bool: exam duration fits the slot
 
     pair_consecutive: np.ndarray  # (n_slots, n_slots) int8
+    pair_same_day: np.ndarray  # (n_slots, n_slots) int8: same date, different slot
     pair_gap: np.ndarray  # (n_slots, n_slots) int8
 
     @property
@@ -143,5 +144,6 @@ def build_context(
         room_ok=room_ok,
         slot_ok=slot_ok,
         pair_consecutive=consecutive.astype(np.int8),
+        pair_same_day=same_day.astype(np.int8),
         pair_gap=gap.astype(np.int8),
     )

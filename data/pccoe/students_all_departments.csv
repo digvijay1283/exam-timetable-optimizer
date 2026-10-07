@@ -1,0 +1,801 @@
+student_id,department,semester
+CE-2-0001,Civil Engineering,2
+CE-2-0002,Civil Engineering,2
+CE-2-0003,Civil Engineering,2
+CE-2-0004,Civil Engineering,2
+CE-2-0005,Civil Engineering,2
+CE-2-0006,Civil Engineering,2
+CE-2-0007,Civil Engineering,2
+CE-2-0008,Civil Engineering,2
+CE-2-0009,Civil Engineering,2
+CE-2-0010,Civil Engineering,2
+CE-2-0011,Civil Engineering,2
+CE-2-0012,Civil Engineering,2
+CE-2-0013,Civil Engineering,2
+CE-2-0014,Civil Engineering,2
+CE-2-0015,Civil Engineering,2
+CE-2-0016,Civil Engineering,2
+CE-4-0017,Civil Engineering,4
+CE-4-0018,Civil Engineering,4
+CE-4-0019,Civil Engineering,4
+CE-4-0020,Civil Engineering,4
+CE-4-0021,Civil Engineering,4
+CE-4-0022,Civil Engineering,4
+CE-4-0023,Civil Engineering,4
+CE-4-0024,Civil Engineering,4
+CE-4-0025,Civil Engineering,4
+CE-4-0026,Civil Engineering,4
+CE-4-0027,Civil Engineering,4
+CE-4-0028,Civil Engineering,4
+CE-4-0029,Civil Engineering,4
+CE-4-0030,Civil Engineering,4
+CE-4-0031,Civil Engineering,4
+CE-6-0032,Civil Engineering,6
+CE-6-0033,Civil Engineering,6
+CE-6-0034,Civil Engineering,6
+CE-6-0035,Civil Engineering,6
+CE-6-0036,Civil Engineering,6
+CE-6-0037,Civil Engineering,6
+CE-6-0038,Civil Engineering,6
+CE-6-0039,Civil Engineering,6
+CE-6-0040,Civil Engineering,6
+CE-6-0041,Civil Engineering,6
+CE-6-0042,Civil Engineering,6
+CE-6-0043,Civil Engineering,6
+CE-6-0044,Civil Engineering,6
+CE-6-0045,Civil Engineering,6
+CE-6-0046,Civil Engineering,6
+COMP-2-0001,Computer Engineering,2
+COMP-2-0002,Computer Engineering,2
+COMP-2-0003,Computer Engineering,2
+COMP-2-0004,Computer Engineering,2
+COMP-2-0005,Computer Engineering,2
+COMP-2-0006,Computer Engineering,2
+COMP-2-0007,Computer Engineering,2
+COMP-2-0008,Computer Engineering,2
+COMP-2-0009,Computer Engineering,2
+COMP-2-0010,Computer Engineering,2
+COMP-2-0011,Computer Engineering,2
+COMP-2-0012,Computer Engineering,2
+COMP-2-0013,Computer Engineering,2
+COMP-2-0014,Computer Engineering,2
+COMP-2-0015,Computer Engineering,2
+COMP-2-0016,Computer Engineering,2
+COMP-2-0017,Computer Engineering,2
+COMP-2-0018,Computer Engineering,2
+COMP-2-0019,Computer Engineering,2
+COMP-2-0020,Computer Engineering,2
+COMP-2-0021,Computer Engineering,2
+COMP-2-0022,Computer Engineering,2
+COMP-2-0023,Computer Engineering,2
+COMP-2-0024,Computer Engineering,2
+COMP-2-0025,Computer Engineering,2
+COMP-2-0026,Computer Engineering,2
+COMP-2-0027,Computer Engineering,2
+COMP-2-0028,Computer Engineering,2
+COMP-2-0029,Computer Engineering,2
+COMP-2-0030,Computer Engineering,2
+COMP-2-0031,Computer Engineering,2
+COMP-2-0032,Computer Engineering,2
+COMP-2-0033,Computer Engineering,2
+COMP-2-0034,Computer Engineering,2
+COMP-2-0035,Computer Engineering,2
+COMP-2-0036,Computer Engineering,2
+COMP-2-0037,Computer Engineering,2
+COMP-2-0038,Computer Engineering,2
+COMP-2-0039,Computer Engineering,2
+COMP-2-0040,Computer Engineering,2
+COMP-2-0041,Computer Engineering,2
+COMP-2-0042,Computer Engineering,2
+COMP-2-0043,Computer Engineering,2
+COMP-2-0044,Computer Engineering,2
+COMP-2-0045,Computer Engineering,2
+COMP-2-0046,Computer Engineering,2
+COMP-2-0047,Computer Engineering,2
+COMP-2-0048,Computer Engineering,2
+COMP-2-0049,Computer Engineering,2
+COMP-2-0050,Computer Engineering,2
+COMP-2-0051,Computer Engineering,2
+COMP-2-0052,Computer Engineering,2
+COMP-2-0053,Computer Engineering,2
+COMP-2-0054,Computer Engineering,2
+COMP-2-0055,Computer Engineering,2
+COMP-2-0056,Computer Engineering,2
+COMP-2-0057,Computer Engineering,2
+COMP-2-0058,Computer Engineering,2
+COMP-2-0059,Computer Engineering,2
+COMP-2-0060,Computer Engineering,2
+COMP-2-0061,Computer Engineering,2
+COMP-4-0062,Computer Engineering,4
+COMP-4-0063,Computer Engineering,4
+COMP-4-0064,Computer Engineering,4
+COMP-4-0065,Computer Engineering,4
+COMP-4-0066,Computer Engineering,4
+COMP-4-0067,Computer Engineering,4
+COMP-4-0068,Computer Engineering,4
+COMP-4-0069,Computer Engineering,4
+COMP-4-0070,Computer Engineering,4
+COMP-4-0071,Computer Engineering,4
+COMP-4-0072,Computer Engineering,4
+COMP-4-0073,Computer Engineering,4
+COMP-4-0074,Computer Engineering,4
+COMP-4-0075,Computer Engineering,4
+COMP-4-0076,Computer Engineering,4
+COMP-4-0077,Computer Engineering,4
+COMP-4-0078,Computer Engineering,4
+COMP-4-0079,Computer Engineering,4
+COMP-4-0080,Computer Engineering,4
+COMP-4-0081,Computer Engineering,4
+COMP-4-0082,Computer Engineering,4
+COMP-4-0083,Computer Engineering,4
+COMP-4-0084,Computer Engineering,4
+COMP-4-0085,Computer Engineering,4
+COMP-4-0086,Computer Engineering,4
+COMP-4-0087,Computer Engineering,4
+COMP-4-0088,Computer Engineering,4
+COMP-4-0089,Computer Engineering,4
+COMP-4-0090,Computer Engineering,4
+COMP-4-0091,Computer Engineering,4
+COMP-4-0092,Computer Engineering,4
+COMP-4-0093,Computer Engineering,4
+COMP-4-0094,Computer Engineering,4
+COMP-4-0095,Computer Engineering,4
+COMP-4-0096,Computer Engineering,4
+COMP-4-0097,Computer Engineering,4
+COMP-4-0098,Computer Engineering,4
+COMP-4-0099,Computer Engineering,4
+COMP-4-0100,Computer Engineering,4
+COMP-4-0101,Computer Engineering,4
+COMP-4-0102,Computer Engineering,4
+COMP-4-0103,Computer Engineering,4
+COMP-4-0104,Computer Engineering,4
+COMP-4-0105,Computer Engineering,4
+COMP-4-0106,Computer Engineering,4
+COMP-4-0107,Computer Engineering,4
+COMP-4-0108,Computer Engineering,4
+COMP-4-0109,Computer Engineering,4
+COMP-4-0110,Computer Engineering,4
+COMP-4-0111,Computer Engineering,4
+COMP-4-0112,Computer Engineering,4
+COMP-4-0113,Computer Engineering,4
+COMP-4-0114,Computer Engineering,4
+COMP-4-0115,Computer Engineering,4
+COMP-4-0116,Computer Engineering,4
+COMP-4-0117,Computer Engineering,4
+COMP-4-0118,Computer Engineering,4
+COMP-4-0119,Computer Engineering,4
+COMP-4-0120,Computer Engineering,4
+COMP-4-0121,Computer Engineering,4
+COMP-4-0122,Computer Engineering,4
+COMP-6-0123,Computer Engineering,6
+COMP-6-0124,Computer Engineering,6
+COMP-6-0125,Computer Engineering,6
+COMP-6-0126,Computer Engineering,6
+COMP-6-0127,Computer Engineering,6
+COMP-6-0128,Computer Engineering,6
+COMP-6-0129,Computer Engineering,6
+COMP-6-0130,Computer Engineering,6
+COMP-6-0131,Computer Engineering,6
+COMP-6-0132,Computer Engineering,6
+COMP-6-0133,Computer Engineering,6
+COMP-6-0134,Computer Engineering,6
+COMP-6-0135,Computer Engineering,6
+COMP-6-0136,Computer Engineering,6
+COMP-6-0137,Computer Engineering,6
+COMP-6-0138,Computer Engineering,6
+COMP-6-0139,Computer Engineering,6
+COMP-6-0140,Computer Engineering,6
+COMP-6-0141,Computer Engineering,6
+COMP-6-0142,Computer Engineering,6
+COMP-6-0143,Computer Engineering,6
+COMP-6-0144,Computer Engineering,6
+COMP-6-0145,Computer Engineering,6
+COMP-6-0146,Computer Engineering,6
+COMP-6-0147,Computer Engineering,6
+COMP-6-0148,Computer Engineering,6
+COMP-6-0149,Computer Engineering,6
+COMP-6-0150,Computer Engineering,6
+COMP-6-0151,Computer Engineering,6
+COMP-6-0152,Computer Engineering,6
+COMP-6-0153,Computer Engineering,6
+COMP-6-0154,Computer Engineering,6
+COMP-6-0155,Computer Engineering,6
+COMP-6-0156,Computer Engineering,6
+COMP-6-0157,Computer Engineering,6
+COMP-6-0158,Computer Engineering,6
+COMP-6-0159,Computer Engineering,6
+COMP-6-0160,Computer Engineering,6
+COMP-6-0161,Computer Engineering,6
+COMP-6-0162,Computer Engineering,6
+COMP-6-0163,Computer Engineering,6
+COMP-6-0164,Computer Engineering,6
+COMP-6-0165,Computer Engineering,6
+COMP-6-0166,Computer Engineering,6
+COMP-6-0167,Computer Engineering,6
+COMP-6-0168,Computer Engineering,6
+COMP-6-0169,Computer Engineering,6
+COMP-6-0170,Computer Engineering,6
+COMP-6-0171,Computer Engineering,6
+COMP-6-0172,Computer Engineering,6
+COMP-6-0173,Computer Engineering,6
+COMP-6-0174,Computer Engineering,6
+COMP-6-0175,Computer Engineering,6
+COMP-6-0176,Computer Engineering,6
+COMP-6-0177,Computer Engineering,6
+COMP-6-0178,Computer Engineering,6
+COMP-6-0179,Computer Engineering,6
+COMP-6-0180,Computer Engineering,6
+COMP-6-0181,Computer Engineering,6
+COMP-6-0182,Computer Engineering,6
+COMP-6-0183,Computer Engineering,6
+COMP-RL-2-0001,Computer Engineering (Regional Language),2
+COMP-RL-2-0002,Computer Engineering (Regional Language),2
+COMP-RL-2-0003,Computer Engineering (Regional Language),2
+COMP-RL-2-0004,Computer Engineering (Regional Language),2
+COMP-RL-2-0005,Computer Engineering (Regional Language),2
+COMP-RL-2-0006,Computer Engineering (Regional Language),2
+COMP-RL-2-0007,Computer Engineering (Regional Language),2
+COMP-RL-2-0008,Computer Engineering (Regional Language),2
+COMP-RL-2-0009,Computer Engineering (Regional Language),2
+COMP-RL-2-0010,Computer Engineering (Regional Language),2
+COMP-RL-2-0011,Computer Engineering (Regional Language),2
+COMP-RL-2-0012,Computer Engineering (Regional Language),2
+COMP-RL-2-0013,Computer Engineering (Regional Language),2
+COMP-RL-2-0014,Computer Engineering (Regional Language),2
+COMP-RL-2-0015,Computer Engineering (Regional Language),2
+COMP-RL-2-0016,Computer Engineering (Regional Language),2
+COMP-RL-4-0017,Computer Engineering (Regional Language),4
+COMP-RL-4-0018,Computer Engineering (Regional Language),4
+COMP-RL-4-0019,Computer Engineering (Regional Language),4
+COMP-RL-4-0020,Computer Engineering (Regional Language),4
+COMP-RL-4-0021,Computer Engineering (Regional Language),4
+COMP-RL-4-0022,Computer Engineering (Regional Language),4
+COMP-RL-4-0023,Computer Engineering (Regional Language),4
+COMP-RL-4-0024,Computer Engineering (Regional Language),4
+COMP-RL-4-0025,Computer Engineering (Regional Language),4
+COMP-RL-4-0026,Computer Engineering (Regional Language),4
+COMP-RL-4-0027,Computer Engineering (Regional Language),4
+COMP-RL-4-0028,Computer Engineering (Regional Language),4
+COMP-RL-4-0029,Computer Engineering (Regional Language),4
+COMP-RL-4-0030,Computer Engineering (Regional Language),4
+COMP-RL-4-0031,Computer Engineering (Regional Language),4
+COMP-RL-6-0032,Computer Engineering (Regional Language),6
+COMP-RL-6-0033,Computer Engineering (Regional Language),6
+COMP-RL-6-0034,Computer Engineering (Regional Language),6
+COMP-RL-6-0035,Computer Engineering (Regional Language),6
+COMP-RL-6-0036,Computer Engineering (Regional Language),6
+COMP-RL-6-0037,Computer Engineering (Regional Language),6
+COMP-RL-6-0038,Computer Engineering (Regional Language),6
+COMP-RL-6-0039,Computer Engineering (Regional Language),6
+COMP-RL-6-0040,Computer Engineering (Regional Language),6
+COMP-RL-6-0041,Computer Engineering (Regional Language),6
+COMP-RL-6-0042,Computer Engineering (Regional Language),6
+COMP-RL-6-0043,Computer Engineering (Regional Language),6
+COMP-RL-6-0044,Computer Engineering (Regional Language),6
+COMP-RL-6-0045,Computer Engineering (Regional Language),6
+COMP-RL-6-0046,Computer Engineering (Regional Language),6
+IT-2-0001,Information Technology,2
+IT-2-0002,Information Technology,2
+IT-2-0003,Information Technology,2
+IT-2-0004,Information Technology,2
+IT-2-0005,Information Technology,2
+IT-2-0006,Information Technology,2
+IT-2-0007,Information Technology,2
+IT-2-0008,Information Technology,2
+IT-2-0009,Information Technology,2
+IT-2-0010,Information Technology,2
+IT-2-0011,Information Technology,2
+IT-2-0012,Information Technology,2
+IT-2-0013,Information Technology,2
+IT-2-0014,Information Technology,2
+IT-2-0015,Information Technology,2
+IT-2-0016,Information Technology,2
+IT-2-0017,Information Technology,2
+IT-2-0018,Information Technology,2
+IT-2-0019,Information Technology,2
+IT-2-0020,Information Technology,2
+IT-2-0021,Information Technology,2
+IT-2-0022,Information Technology,2
+IT-2-0023,Information Technology,2
+IT-2-0024,Information Technology,2
+IT-2-0025,Information Technology,2
+IT-2-0026,Information Technology,2
+IT-2-0027,Information Technology,2
+IT-2-0028,Information Technology,2
+IT-2-0029,Information Technology,2
+IT-2-0030,Information Technology,2
+IT-2-0031,Information Technology,2
+IT-4-0032,Information Technology,4
+IT-4-0033,Information Technology,4
+IT-4-0034,Information Technology,4
+IT-4-0035,Information Technology,4
+IT-4-0036,Information Technology,4
+IT-4-0037,Information Technology,4
+IT-4-0038,Information Technology,4
+IT-4-0039,Information Technology,4
+IT-4-0040,Information Technology,4
+IT-4-0041,Information Technology,4
+IT-4-0042,Information Technology,4
+IT-4-0043,Information Technology,4
+IT-4-0044,Information Technology,4
+IT-4-0045,Information Technology,4
+IT-4-0046,Information Technology,4
+IT-4-0047,Information Technology,4
+IT-4-0048,Information Technology,4
+IT-4-0049,Information Technology,4
+IT-4-0050,Information Technology,4
+IT-4-0051,Information Technology,4
+IT-4-0052,Information Technology,4
+IT-4-0053,Information Technology,4
+IT-4-0054,Information Technology,4
+IT-4-0055,Information Technology,4
+IT-4-0056,Information Technology,4
+IT-4-0057,Information Technology,4
+IT-4-0058,Information Technology,4
+IT-4-0059,Information Technology,4
+IT-4-0060,Information Technology,4
+IT-4-0061,Information Technology,4
+IT-6-0062,Information Technology,6
+IT-6-0063,Information Technology,6
+IT-6-0064,Information Technology,6
+IT-6-0065,Information Technology,6
+IT-6-0066,Information Technology,6
+IT-6-0067,Information Technology,6
+IT-6-0068,Information Technology,6
+IT-6-0069,Information Technology,6
+IT-6-0070,Information Technology,6
+IT-6-0071,Information Technology,6
+IT-6-0072,Information Technology,6
+IT-6-0073,Information Technology,6
+IT-6-0074,Information Technology,6
+IT-6-0075,Information Technology,6
+IT-6-0076,Information Technology,6
+IT-6-0077,Information Technology,6
+IT-6-0078,Information Technology,6
+IT-6-0079,Information Technology,6
+IT-6-0080,Information Technology,6
+IT-6-0081,Information Technology,6
+IT-6-0082,Information Technology,6
+IT-6-0083,Information Technology,6
+IT-6-0084,Information Technology,6
+IT-6-0085,Information Technology,6
+IT-6-0086,Information Technology,6
+IT-6-0087,Information Technology,6
+IT-6-0088,Information Technology,6
+IT-6-0089,Information Technology,6
+IT-6-0090,Information Technology,6
+IT-6-0091,Information Technology,6
+ENTC-2-0001,Electronics and Telecommunication Engineering,2
+ENTC-2-0002,Electronics and Telecommunication Engineering,2
+ENTC-2-0003,Electronics and Telecommunication Engineering,2
+ENTC-2-0004,Electronics and Telecommunication Engineering,2
+ENTC-2-0005,Electronics and Telecommunication Engineering,2
+ENTC-2-0006,Electronics and Telecommunication Engineering,2
+ENTC-2-0007,Electronics and Telecommunication Engineering,2
+ENTC-2-0008,Electronics and Telecommunication Engineering,2
+ENTC-2-0009,Electronics and Telecommunication Engineering,2
+ENTC-2-0010,Electronics and Telecommunication Engineering,2
+ENTC-2-0011,Electronics and Telecommunication Engineering,2
+ENTC-2-0012,Electronics and Telecommunication Engineering,2
+ENTC-2-0013,Electronics and Telecommunication Engineering,2
+ENTC-2-0014,Electronics and Telecommunication Engineering,2
+ENTC-2-0015,Electronics and Telecommunication Engineering,2
+ENTC-2-0016,Electronics and Telecommunication Engineering,2
+ENTC-2-0017,Electronics and Telecommunication Engineering,2
+ENTC-2-0018,Electronics and Telecommunication Engineering,2
+ENTC-2-0019,Electronics and Telecommunication Engineering,2
+ENTC-2-0020,Electronics and Telecommunication Engineering,2
+ENTC-2-0021,Electronics and Telecommunication Engineering,2
+ENTC-2-0022,Electronics and Telecommunication Engineering,2
+ENTC-2-0023,Electronics and Telecommunication Engineering,2
+ENTC-2-0024,Electronics and Telecommunication Engineering,2
+ENTC-2-0025,Electronics and Telecommunication Engineering,2
+ENTC-2-0026,Electronics and Telecommunication Engineering,2
+ENTC-2-0027,Electronics and Telecommunication Engineering,2
+ENTC-2-0028,Electronics and Telecommunication Engineering,2
+ENTC-2-0029,Electronics and Telecommunication Engineering,2
+ENTC-2-0030,Electronics and Telecommunication Engineering,2
+ENTC-2-0031,Electronics and Telecommunication Engineering,2
+ENTC-2-0032,Electronics and Telecommunication Engineering,2
+ENTC-2-0033,Electronics and Telecommunication Engineering,2
+ENTC-2-0034,Electronics and Telecommunication Engineering,2
+ENTC-2-0035,Electronics and Telecommunication Engineering,2
+ENTC-2-0036,Electronics and Telecommunication Engineering,2
+ENTC-2-0037,Electronics and Telecommunication Engineering,2
+ENTC-2-0038,Electronics and Telecommunication Engineering,2
+ENTC-2-0039,Electronics and Telecommunication Engineering,2
+ENTC-2-0040,Electronics and Telecommunication Engineering,2
+ENTC-2-0041,Electronics and Telecommunication Engineering,2
+ENTC-2-0042,Electronics and Telecommunication Engineering,2
+ENTC-2-0043,Electronics and Telecommunication Engineering,2
+ENTC-2-0044,Electronics and Telecommunication Engineering,2
+ENTC-2-0045,Electronics and Telecommunication Engineering,2
+ENTC-2-0046,Electronics and Telecommunication Engineering,2
+ENTC-4-0047,Electronics and Telecommunication Engineering,4
+ENTC-4-0048,Electronics and Telecommunication Engineering,4
+ENTC-4-0049,Electronics and Telecommunication Engineering,4
+ENTC-4-0050,Electronics and Telecommunication Engineering,4
+ENTC-4-0051,Electronics and Telecommunication Engineering,4
+ENTC-4-0052,Electronics and Telecommunication Engineering,4
+ENTC-4-0053,Electronics and Telecommunication Engineering,4
+ENTC-4-0054,Electronics and Telecommunication Engineering,4
+ENTC-4-0055,Electronics and Telecommunication Engineering,4
+ENTC-4-0056,Electronics and Telecommunication Engineering,4
+ENTC-4-0057,Electronics and Telecommunication Engineering,4
+ENTC-4-0058,Electronics and Telecommunication Engineering,4
+ENTC-4-0059,Electronics and Telecommunication Engineering,4
+ENTC-4-0060,Electronics and Telecommunication Engineering,4
+ENTC-4-0061,Electronics and Telecommunication Engineering,4
+ENTC-4-0062,Electronics and Telecommunication Engineering,4
+ENTC-4-0063,Electronics and Telecommunication Engineering,4
+ENTC-4-0064,Electronics and Telecommunication Engineering,4
+ENTC-4-0065,Electronics and Telecommunication Engineering,4
+ENTC-4-0066,Electronics and Telecommunication Engineering,4
+ENTC-4-0067,Electronics and Telecommunication Engineering,4
+ENTC-4-0068,Electronics and Telecommunication Engineering,4
+ENTC-4-0069,Electronics and Telecommunication Engineering,4
+ENTC-4-0070,Electronics and Telecommunication Engineering,4
+ENTC-4-0071,Electronics and Telecommunication Engineering,4
+ENTC-4-0072,Electronics and Telecommunication Engineering,4
+ENTC-4-0073,Electronics and Telecommunication Engineering,4
+ENTC-4-0074,Electronics and Telecommunication Engineering,4
+ENTC-4-0075,Electronics and Telecommunication Engineering,4
+ENTC-4-0076,Electronics and Telecommunication Engineering,4
+ENTC-4-0077,Electronics and Telecommunication Engineering,4
+ENTC-4-0078,Electronics and Telecommunication Engineering,4
+ENTC-4-0079,Electronics and Telecommunication Engineering,4
+ENTC-4-0080,Electronics and Telecommunication Engineering,4
+ENTC-4-0081,Electronics and Telecommunication Engineering,4
+ENTC-4-0082,Electronics and Telecommunication Engineering,4
+ENTC-4-0083,Electronics and Telecommunication Engineering,4
+ENTC-4-0084,Electronics and Telecommunication Engineering,4
+ENTC-4-0085,Electronics and Telecommunication Engineering,4
+ENTC-4-0086,Electronics and Telecommunication Engineering,4
+ENTC-4-0087,Electronics and Telecommunication Engineering,4
+ENTC-4-0088,Electronics and Telecommunication Engineering,4
+ENTC-4-0089,Electronics and Telecommunication Engineering,4
+ENTC-4-0090,Electronics and Telecommunication Engineering,4
+ENTC-4-0091,Electronics and Telecommunication Engineering,4
+ENTC-4-0092,Electronics and Telecommunication Engineering,4
+ENTC-6-0093,Electronics and Telecommunication Engineering,6
+ENTC-6-0094,Electronics and Telecommunication Engineering,6
+ENTC-6-0095,Electronics and Telecommunication Engineering,6
+ENTC-6-0096,Electronics and Telecommunication Engineering,6
+ENTC-6-0097,Electronics and Telecommunication Engineering,6
+ENTC-6-0098,Electronics and Telecommunication Engineering,6
+ENTC-6-0099,Electronics and Telecommunication Engineering,6
+ENTC-6-0100,Electronics and Telecommunication Engineering,6
+ENTC-6-0101,Electronics and Telecommunication Engineering,6
+ENTC-6-0102,Electronics and Telecommunication Engineering,6
+ENTC-6-0103,Electronics and Telecommunication Engineering,6
+ENTC-6-0104,Electronics and Telecommunication Engineering,6
+ENTC-6-0105,Electronics and Telecommunication Engineering,6
+ENTC-6-0106,Electronics and Telecommunication Engineering,6
+ENTC-6-0107,Electronics and Telecommunication Engineering,6
+ENTC-6-0108,Electronics and Telecommunication Engineering,6
+ENTC-6-0109,Electronics and Telecommunication Engineering,6
+ENTC-6-0110,Electronics and Telecommunication Engineering,6
+ENTC-6-0111,Electronics and Telecommunication Engineering,6
+ENTC-6-0112,Electronics and Telecommunication Engineering,6
+ENTC-6-0113,Electronics and Telecommunication Engineering,6
+ENTC-6-0114,Electronics and Telecommunication Engineering,6
+ENTC-6-0115,Electronics and Telecommunication Engineering,6
+ENTC-6-0116,Electronics and Telecommunication Engineering,6
+ENTC-6-0117,Electronics and Telecommunication Engineering,6
+ENTC-6-0118,Electronics and Telecommunication Engineering,6
+ENTC-6-0119,Electronics and Telecommunication Engineering,6
+ENTC-6-0120,Electronics and Telecommunication Engineering,6
+ENTC-6-0121,Electronics and Telecommunication Engineering,6
+ENTC-6-0122,Electronics and Telecommunication Engineering,6
+ENTC-6-0123,Electronics and Telecommunication Engineering,6
+ENTC-6-0124,Electronics and Telecommunication Engineering,6
+ENTC-6-0125,Electronics and Telecommunication Engineering,6
+ENTC-6-0126,Electronics and Telecommunication Engineering,6
+ENTC-6-0127,Electronics and Telecommunication Engineering,6
+ENTC-6-0128,Electronics and Telecommunication Engineering,6
+ENTC-6-0129,Electronics and Telecommunication Engineering,6
+ENTC-6-0130,Electronics and Telecommunication Engineering,6
+ENTC-6-0131,Electronics and Telecommunication Engineering,6
+ENTC-6-0132,Electronics and Telecommunication Engineering,6
+ENTC-6-0133,Electronics and Telecommunication Engineering,6
+ENTC-6-0134,Electronics and Telecommunication Engineering,6
+ENTC-6-0135,Electronics and Telecommunication Engineering,6
+ENTC-6-0136,Electronics and Telecommunication Engineering,6
+ENTC-6-0137,Electronics and Telecommunication Engineering,6
+MECH-2-0001,Mechanical Engineering,2
+MECH-2-0002,Mechanical Engineering,2
+MECH-2-0003,Mechanical Engineering,2
+MECH-2-0004,Mechanical Engineering,2
+MECH-2-0005,Mechanical Engineering,2
+MECH-2-0006,Mechanical Engineering,2
+MECH-2-0007,Mechanical Engineering,2
+MECH-2-0008,Mechanical Engineering,2
+MECH-2-0009,Mechanical Engineering,2
+MECH-2-0010,Mechanical Engineering,2
+MECH-2-0011,Mechanical Engineering,2
+MECH-2-0012,Mechanical Engineering,2
+MECH-2-0013,Mechanical Engineering,2
+MECH-2-0014,Mechanical Engineering,2
+MECH-2-0015,Mechanical Engineering,2
+MECH-2-0016,Mechanical Engineering,2
+MECH-2-0017,Mechanical Engineering,2
+MECH-2-0018,Mechanical Engineering,2
+MECH-2-0019,Mechanical Engineering,2
+MECH-2-0020,Mechanical Engineering,2
+MECH-2-0021,Mechanical Engineering,2
+MECH-2-0022,Mechanical Engineering,2
+MECH-2-0023,Mechanical Engineering,2
+MECH-2-0024,Mechanical Engineering,2
+MECH-2-0025,Mechanical Engineering,2
+MECH-2-0026,Mechanical Engineering,2
+MECH-2-0027,Mechanical Engineering,2
+MECH-2-0028,Mechanical Engineering,2
+MECH-2-0029,Mechanical Engineering,2
+MECH-2-0030,Mechanical Engineering,2
+MECH-2-0031,Mechanical Engineering,2
+MECH-2-0032,Mechanical Engineering,2
+MECH-2-0033,Mechanical Engineering,2
+MECH-2-0034,Mechanical Engineering,2
+MECH-2-0035,Mechanical Engineering,2
+MECH-2-0036,Mechanical Engineering,2
+MECH-2-0037,Mechanical Engineering,2
+MECH-2-0038,Mechanical Engineering,2
+MECH-2-0039,Mechanical Engineering,2
+MECH-2-0040,Mechanical Engineering,2
+MECH-2-0041,Mechanical Engineering,2
+MECH-2-0042,Mechanical Engineering,2
+MECH-2-0043,Mechanical Engineering,2
+MECH-2-0044,Mechanical Engineering,2
+MECH-2-0045,Mechanical Engineering,2
+MECH-2-0046,Mechanical Engineering,2
+MECH-4-0047,Mechanical Engineering,4
+MECH-4-0048,Mechanical Engineering,4
+MECH-4-0049,Mechanical Engineering,4
+MECH-4-0050,Mechanical Engineering,4
+MECH-4-0051,Mechanical Engineering,4
+MECH-4-0052,Mechanical Engineering,4
+MECH-4-0053,Mechanical Engineering,4
+MECH-4-0054,Mechanical Engineering,4
+MECH-4-0055,Mechanical Engineering,4
+MECH-4-0056,Mechanical Engineering,4
+MECH-4-0057,Mechanical Engineering,4
+MECH-4-0058,Mechanical Engineering,4
+MECH-4-0059,Mechanical Engineering,4
+MECH-4-0060,Mechanical Engineering,4
+MECH-4-0061,Mechanical Engineering,4
+MECH-4-0062,Mechanical Engineering,4
+MECH-4-0063,Mechanical Engineering,4
+MECH-4-0064,Mechanical Engineering,4
+MECH-4-0065,Mechanical Engineering,4
+MECH-4-0066,Mechanical Engineering,4
+MECH-4-0067,Mechanical Engineering,4
+MECH-4-0068,Mechanical Engineering,4
+MECH-4-0069,Mechanical Engineering,4
+MECH-4-0070,Mechanical Engineering,4
+MECH-4-0071,Mechanical Engineering,4
+MECH-4-0072,Mechanical Engineering,4
+MECH-4-0073,Mechanical Engineering,4
+MECH-4-0074,Mechanical Engineering,4
+MECH-4-0075,Mechanical Engineering,4
+MECH-4-0076,Mechanical Engineering,4
+MECH-4-0077,Mechanical Engineering,4
+MECH-4-0078,Mechanical Engineering,4
+MECH-4-0079,Mechanical Engineering,4
+MECH-4-0080,Mechanical Engineering,4
+MECH-4-0081,Mechanical Engineering,4
+MECH-4-0082,Mechanical Engineering,4
+MECH-4-0083,Mechanical Engineering,4
+MECH-4-0084,Mechanical Engineering,4
+MECH-4-0085,Mechanical Engineering,4
+MECH-4-0086,Mechanical Engineering,4
+MECH-4-0087,Mechanical Engineering,4
+MECH-4-0088,Mechanical Engineering,4
+MECH-4-0089,Mechanical Engineering,4
+MECH-4-0090,Mechanical Engineering,4
+MECH-4-0091,Mechanical Engineering,4
+MECH-4-0092,Mechanical Engineering,4
+MECH-6-0093,Mechanical Engineering,6
+MECH-6-0094,Mechanical Engineering,6
+MECH-6-0095,Mechanical Engineering,6
+MECH-6-0096,Mechanical Engineering,6
+MECH-6-0097,Mechanical Engineering,6
+MECH-6-0098,Mechanical Engineering,6
+MECH-6-0099,Mechanical Engineering,6
+MECH-6-0100,Mechanical Engineering,6
+MECH-6-0101,Mechanical Engineering,6
+MECH-6-0102,Mechanical Engineering,6
+MECH-6-0103,Mechanical Engineering,6
+MECH-6-0104,Mechanical Engineering,6
+MECH-6-0105,Mechanical Engineering,6
+MECH-6-0106,Mechanical Engineering,6
+MECH-6-0107,Mechanical Engineering,6
+MECH-6-0108,Mechanical Engineering,6
+MECH-6-0109,Mechanical Engineering,6
+MECH-6-0110,Mechanical Engineering,6
+MECH-6-0111,Mechanical Engineering,6
+MECH-6-0112,Mechanical Engineering,6
+MECH-6-0113,Mechanical Engineering,6
+MECH-6-0114,Mechanical Engineering,6
+MECH-6-0115,Mechanical Engineering,6
+MECH-6-0116,Mechanical Engineering,6
+MECH-6-0117,Mechanical Engineering,6
+MECH-6-0118,Mechanical Engineering,6
+MECH-6-0119,Mechanical Engineering,6
+MECH-6-0120,Mechanical Engineering,6
+MECH-6-0121,Mechanical Engineering,6
+MECH-6-0122,Mechanical Engineering,6
+MECH-6-0123,Mechanical Engineering,6
+MECH-6-0124,Mechanical Engineering,6
+MECH-6-0125,Mechanical Engineering,6
+MECH-6-0126,Mechanical Engineering,6
+MECH-6-0127,Mechanical Engineering,6
+MECH-6-0128,Mechanical Engineering,6
+MECH-6-0129,Mechanical Engineering,6
+MECH-6-0130,Mechanical Engineering,6
+MECH-6-0131,Mechanical Engineering,6
+MECH-6-0132,Mechanical Engineering,6
+MECH-6-0133,Mechanical Engineering,6
+MECH-6-0134,Mechanical Engineering,6
+MECH-6-0135,Mechanical Engineering,6
+MECH-6-0136,Mechanical Engineering,6
+MECH-6-0137,Mechanical Engineering,6
+AIML-2-0001,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0002,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0003,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0004,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0005,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0006,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0007,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0008,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0009,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0010,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0011,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0012,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0013,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0014,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0015,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0016,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0017,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0018,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0019,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0020,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0021,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0022,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0023,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0024,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0025,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0026,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0027,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0028,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0029,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0030,CSE (Artificial Intelligence and Machine Learning),2
+AIML-2-0031,CSE (Artificial Intelligence and Machine Learning),2
+AIML-4-0032,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0033,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0034,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0035,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0036,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0037,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0038,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0039,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0040,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0041,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0042,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0043,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0044,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0045,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0046,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0047,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0048,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0049,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0050,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0051,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0052,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0053,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0054,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0055,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0056,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0057,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0058,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0059,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0060,CSE (Artificial Intelligence and Machine Learning),4
+AIML-4-0061,CSE (Artificial Intelligence and Machine Learning),4
+AIML-6-0062,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0063,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0064,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0065,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0066,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0067,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0068,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0069,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0070,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0071,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0072,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0073,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0074,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0075,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0076,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0077,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0078,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0079,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0080,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0081,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0082,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0083,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0084,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0085,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0086,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0087,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0088,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0089,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0090,CSE (Artificial Intelligence and Machine Learning),6
+AIML-6-0091,CSE (Artificial Intelligence and Machine Learning),6
+VLSI-2-0001,Electronics Engineering (VLSI Design & Technology),2
+VLSI-2-0002,Electronics Engineering (VLSI Design & Technology),2
+VLSI-2-0003,Electronics Engineering (VLSI Design & Technology),2
+VLSI-2-0004,Electronics Engineering (VLSI Design & Technology),2
+VLSI-2-0005,Electronics Engineering (VLSI Design & Technology),2
+VLSI-2-0006,Electronics Engineering (VLSI Design & Technology),2
+VLSI-2-0007,Electronics Engineering (VLSI Design & Technology),2
+VLSI-2-0008,Electronics Engineering (VLSI Design & Technology),2
+VLSI-2-0009,Electronics Engineering (VLSI Design & Technology),2
+VLSI-2-0010,Electronics Engineering (VLSI Design & Technology),2
+VLSI-2-0011,Electronics Engineering (VLSI Design & Technology),2
+VLSI-2-0012,Electronics Engineering (VLSI Design & Technology),2
+VLSI-2-0013,Electronics Engineering (VLSI Design & Technology),2
+VLSI-2-0014,Electronics Engineering (VLSI Design & Technology),2
+VLSI-2-0015,Electronics Engineering (VLSI Design & Technology),2
+VLSI-2-0016,Electronics Engineering (VLSI Design & Technology),2
+VLSI-4-0017,Electronics Engineering (VLSI Design & Technology),4
+VLSI-4-0018,Electronics Engineering (VLSI Design & Technology),4
+VLSI-4-0019,Electronics Engineering (VLSI Design & Technology),4
+VLSI-4-0020,Electronics Engineering (VLSI Design & Technology),4
+VLSI-4-0021,Electronics Engineering (VLSI Design & Technology),4
+VLSI-4-0022,Electronics Engineering (VLSI Design & Technology),4
+VLSI-4-0023,Electronics Engineering (VLSI Design & Technology),4
+VLSI-4-0024,Electronics Engineering (VLSI Design & Technology),4
+VLSI-4-0025,Electronics Engineering (VLSI Design & Technology),4
+VLSI-4-0026,Electronics Engineering (VLSI Design & Technology),4
+VLSI-4-0027,Electronics Engineering (VLSI Design & Technology),4
+VLSI-4-0028,Electronics Engineering (VLSI Design & Technology),4
+VLSI-4-0029,Electronics Engineering (VLSI Design & Technology),4
+VLSI-4-0030,Electronics Engineering (VLSI Design & Technology),4
+VLSI-4-0031,Electronics Engineering (VLSI Design & Technology),4
+VLSI-6-0032,Electronics Engineering (VLSI Design & Technology),6
+VLSI-6-0033,Electronics Engineering (VLSI Design & Technology),6
+VLSI-6-0034,Electronics Engineering (VLSI Design & Technology),6
+VLSI-6-0035,Electronics Engineering (VLSI Design & Technology),6
+VLSI-6-0036,Electronics Engineering (VLSI Design & Technology),6
+VLSI-6-0037,Electronics Engineering (VLSI Design & Technology),6
+VLSI-6-0038,Electronics Engineering (VLSI Design & Technology),6
+VLSI-6-0039,Electronics Engineering (VLSI Design & Technology),6
+VLSI-6-0040,Electronics Engineering (VLSI Design & Technology),6
+VLSI-6-0041,Electronics Engineering (VLSI Design & Technology),6
+VLSI-6-0042,Electronics Engineering (VLSI Design & Technology),6
+VLSI-6-0043,Electronics Engineering (VLSI Design & Technology),6
+VLSI-6-0044,Electronics Engineering (VLSI Design & Technology),6
+VLSI-6-0045,Electronics Engineering (VLSI Design & Technology),6
+VLSI-6-0046,Electronics Engineering (VLSI Design & Technology),6
+CE-RL-2-0001,Civil Engineering (Regional Language),2
+CE-RL-2-0002,Civil Engineering (Regional Language),2
+CE-RL-2-0003,Civil Engineering (Regional Language),2
+CE-RL-2-0004,Civil Engineering (Regional Language),2
+CE-RL-2-0005,Civil Engineering (Regional Language),2
+CE-RL-2-0006,Civil Engineering (Regional Language),2
+CE-RL-2-0007,Civil Engineering (Regional Language),2
+CE-RL-2-0008,Civil Engineering (Regional Language),2
+CE-RL-4-0009,Civil Engineering (Regional Language),4
+CE-RL-4-0010,Civil Engineering (Regional Language),4
+CE-RL-4-0011,Civil Engineering (Regional Language),4
+CE-RL-4-0012,Civil Engineering (Regional Language),4
+CE-RL-4-0013,Civil Engineering (Regional Language),4
+CE-RL-4-0014,Civil Engineering (Regional Language),4
+CE-RL-4-0015,Civil Engineering (Regional Language),4
+CE-RL-4-0016,Civil Engineering (Regional Language),4
+CE-RL-6-0017,Civil Engineering (Regional Language),6
+CE-RL-6-0018,Civil Engineering (Regional Language),6
+CE-RL-6-0019,Civil Engineering (Regional Language),6
+CE-RL-6-0020,Civil Engineering (Regional Language),6
+CE-RL-6-0021,Civil Engineering (Regional Language),6
+CE-RL-6-0022,Civil Engineering (Regional Language),6
+CE-RL-6-0023,Civil Engineering (Regional Language),6

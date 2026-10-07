@@ -4,6 +4,7 @@ from app.optimization.constraints.room_capacity import capacity_violations
 from app.optimization.constraints.room_conflict import room_collisions
 from app.optimization.constraints.room_suitability import room_type_mismatches, unavailable_rooms
 from app.optimization.constraints.room_utilization import room_utilization_penalty
+from app.optimization.constraints.same_day import same_day_conflicts
 from app.optimization.constraints.short_gap import short_gaps
 from app.optimization.constraints.slot_preference import slot_preference_penalty
 from app.optimization.constraints.student_conflict import student_clashes
@@ -18,6 +19,7 @@ __all__ = [
     "room_collisions",
     "room_type_mismatches",
     "room_utilization_penalty",
+    "same_day_conflicts",
     "short_gaps",
     "slot_preference_penalty",
     "student_clashes",

@@ -18,6 +18,8 @@ class Weights:
 class ConstraintParams:
     # Exams on different days no more than this many calendar days apart count as a short gap.
     short_gap_days: int = 1
+    # H8: a student sits at most one exam per day (exams sharing students go on different days).
+    one_exam_per_day: bool = True
 
 
 # Room types each exam type may use. Unknown exam types may use any room.

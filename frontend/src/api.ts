@@ -58,3 +58,9 @@ export const api = {
     request<{ id: string; status: string; log_tail: string[] }>("/api/experiments/run", json({ name, max_seeds: maxSeeds })),
   experimentJob: (id: string) => request<{ id: string; status: string; log_tail: string[] }>(`/api/experiments/jobs/${id}`),
 };
+
+/** Prefilled values for a new session; loading a sample overwrites the dates. */
+export const DEFAULT_SESSION = {
+  name: "End Semester Examination", academic_year: "2026-27", semester: "VII",
+  start_date: "2026-11-20", end_date: "2026-12-31", slots_per_day: 2,
+};

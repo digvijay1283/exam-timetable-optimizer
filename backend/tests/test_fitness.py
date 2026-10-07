@@ -2,16 +2,26 @@
 
 Exams E1(25) E2(27) E3(10); rooms R1(30) R2(40) R3(120); slots S01,S02 on Mon 23 Nov and
 S03,S04 on Tue 24 Nov (positions 0,1 within each day). C = [[0,20,0],[20,0,7],[0,7,0]].
+
+The hand-computed example puts E2 and E3 back-to-back on Tuesday, which H8 (one exam per student
+per day) forbids, so these cases build the context with H8 off; H8 is tested at the end.
 """
 from dataclasses import replace
 
 import numpy as np
 import pytest
 
-from app.core.config import Weights
+from app.core.config import ConstraintParams, Weights
 from app.optimization.chromosome import Chromosome
-from app.optimization.context import build_context
+from app.optimization.context import build_context as _build_context
 from app.optimization.fitness import evaluate
+
+
+NO_H8 = ConstraintParams(one_exam_per_day=False)
+
+
+def build_context(dataset, **kw):
+    return _build_context(dataset, **({"params": NO_H8} | kw))
 
 
 def arrays(slot, room):
@@ -95,9 +105,7 @@ def test_weights_scale_each_component(tiny_dataset):
 
 
 def test_short_gap_days_parameter(tiny_dataset):
-    from app.core.config import ConstraintParams
-
-    ctx = build_context(tiny_dataset, params=ConstraintParams(short_gap_days=0))
+    ctx = build_context(tiny_dataset, params=ConstraintParams(short_gap_days=0, one_exam_per_day=False))
     ev = evaluate(ctx, *arrays([0, 2, 3], [0, 1, 0]))
     assert ev.short_gaps == 0  # adjacent days no longer count
 
@@ -110,3 +118,25 @@ def test_chromosome_round_trip_and_evaluate(tiny_dataset):
     again = Chromosome.from_assignments(ctx, chrom.assignments(ctx))
     assert (again.slot == chrom.slot).all() and (again.room == chrom.room).all()
     assert chrom.assignments(ctx)[0] == ("E1", "S01", "R1")
+
+
+# --- H8: at most one exam per student per day ---------------------------------------------------
+def test_same_day_exams_sharing_students_are_hard_violations(tiny_dataset):
+    ctx = _build_context(tiny_dataset)  # default rules: H8 on
+    ev = evaluate(ctx, *arrays([0, 2, 3], [0, 1, 0]))  # E2 (S03) and E3 (S04) both on Tue
+    assert ev.same_day_conflicts == 7 and ev.student_clashes == 0
+    assert ev.hard_violations == 7 and not ev.valid
+
+
+def test_same_day_rule_is_satisfiable_on_two_days(tiny_dataset):
+    ctx = _build_context(tiny_dataset)
+    # E1 and E3 share nobody, so they may share Monday; E2 alone on Tuesday.
+    ev = evaluate(ctx, *arrays([0, 2, 1], [0, 1, 0]))
+    assert ev.same_day_conflicts == 0 and ev.valid
+    assert ev.short_gaps == 27  # E1-E2 and E2-E3 on adjacent days
+    assert ev.consecutive == 0
+
+
+def test_same_slot_counts_as_a_clash_not_a_same_day_conflict(tiny_dataset):
+    ev = evaluate(_build_context(tiny_dataset), *arrays([0, 0, 2], [0, 1, 0]))
+    assert ev.student_clashes == 20 and ev.same_day_conflicts == 0

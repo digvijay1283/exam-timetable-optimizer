@@ -1,0 +1,26 @@
+room_id,room_code,capacity,building,room_type,available
+R01,C101,60,Main Block,classroom,TRUE
+R02,C102,60,Main Block,classroom,TRUE
+R03,C103,60,Main Block,classroom,TRUE
+R04,C104,60,Main Block,classroom,TRUE
+R05,C105,60,Main Block,classroom,TRUE
+R06,C106,60,Main Block,classroom,TRUE
+R07,C107,60,Main Block,classroom,TRUE
+R08,C108,60,Main Block,classroom,TRUE
+R09,C109,60,Main Block,classroom,TRUE
+R10,C110,60,Main Block,classroom,TRUE
+R11,C111,60,Main Block,classroom,TRUE
+R12,C112,60,Main Block,classroom,TRUE
+R13,C113,60,Main Block,classroom,TRUE
+R14,C114,60,Main Block,classroom,TRUE
+R15,C115,60,Main Block,classroom,TRUE
+R16,C116,100,Main Block,classroom,TRUE
+R17,C117,100,Main Block,classroom,TRUE
+R18,C118,100,Main Block,classroom,TRUE
+R19,C119,100,Main Block,classroom,TRUE
+R20,C120,100,Main Block,classroom,TRUE
+R26,LAB126,100,Academic Block,lab,TRUE
+R27,LAB127,100,Academic Block,lab,TRUE
+R28,LAB128,100,Academic Block,lab,TRUE
+R29,LAB129,100,Academic Block,lab,TRUE
+R30,LAB130,100,Academic Block,lab,TRUE

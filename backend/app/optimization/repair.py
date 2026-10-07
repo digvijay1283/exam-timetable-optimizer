@@ -20,6 +20,8 @@ def _violators(ctx: OptimizationContext, occ: Occupancy) -> np.ndarray:
     bad = ~ctx.room_ok[ar, room]  # capacity, availability or room type
     bad |= ~ctx.slot_ok[ar, slot]  # exam longer than its slot
     bad |= occ.clash[ar, slot] > 0  # shares students with another exam in the same slot
+    if ctx.params.one_exam_per_day:
+        bad |= occ.day_clash[ar, ctx.slot_day_index[slot]] > 0  # ... or on the same day
     _, first = np.unique(slot * ctx.n_rooms + room, return_index=True)
     sharing = np.ones(ctx.n_exams, dtype=bool)
     sharing[first] = False  # every occupant of a room/slot cell except the first
@@ -44,7 +46,7 @@ def repair(
             break
         i = int(rng.choice(bad))
         occ.remove(i)
-        slot, room = choose_placement(occ, i, rng, mode)  # type: ignore[arg-type]
+        slot, room = choose_placement(occ, i, rng, mode, explore=True)  # type: ignore[arg-type]
         occ.place(i, slot, room)
         moves += 1
     chrom.slot[:] = occ.slot_of

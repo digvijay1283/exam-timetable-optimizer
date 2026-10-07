@@ -63,4 +63,5 @@ class ValidationOut(BaseModel):
     unavailable_rooms: int
     room_type_mismatches: int
     duration_violations: int
+    same_day_conflicts: int
     details: list[str]

@@ -48,6 +48,7 @@ def test_hard_breakdown_matches_validator(slot, room):
     assert ev.unavailable_rooms == res.unavailable_rooms
     assert ev.room_type_mismatches == res.room_type_mismatches
     assert ev.duration_violations == res.duration_violations
+    assert ev.same_day_conflicts == res.same_day_conflicts
     assert ev.hard_violations == res.hard_violations
     assert ev.valid == res.valid
 
@@ -102,14 +103,17 @@ def test_soft_components_match_naive_per_student_computation(slot, room):
 
 
 def test_perfect_hand_built_schedule_is_valid_on_generated_data():
-    """Sanity: a DSATUR slot assignment with best-fit rooms has zero hard violations in both."""
+    """Sanity: a DSATUR colouring with best-fit rooms has zero hard violations in both.
+
+    Colour k goes to the first slot of day k, so exams sharing students are on different days."""
     from app.services.conflict_service import dsatur_colors
 
     colors = dsatur_colors(CTX.conflict)
-    slot = colors.astype(np.int64)  # colour k -> k-th slot; DSATUR never exceeds S here
-    assert slot.max() < S
+    assert colors.max() < CTX.n_days  # the generator sizes the calendar for this
+    first_slot_of_day = np.array([np.flatnonzero(CTX.slot_day_index == d)[0] for d in range(CTX.n_days)])
+    slot = first_slot_of_day[colors].astype(np.int64)
     room = np.zeros(N, dtype=np.int64)
-    for c in range(slot.max() + 1):
+    for c in np.unique(slot):
         members = sorted(np.flatnonzero(slot == c), key=lambda i: -CTX.student_count[i])
         free = list(np.argsort(CTX.room_capacity))  # smallest first
         for i in members:

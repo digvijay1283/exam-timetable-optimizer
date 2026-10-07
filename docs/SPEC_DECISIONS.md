@@ -40,6 +40,9 @@ Date format `YYYY-MM-DD`, time format `HH:MM`. Header names are exact. Values ar
 | H5 | Room not available | 1 per exam |
 | H6 | Exam type not allowed in room type | 1 per exam |
 | H7 | Exam duration longer than the slot | 1 per exam |
+| H8 | More than one exam per student per day: two exams sharing students in different slots of the same date | Σ over same-date, different-slot exam pairs of C[i][j]. Same-slot pairs count only under H1. On by default; `ConstraintParams.one_exam_per_day = False` turns it off. |
+
+With H8 on, the consecutive term and the same-day part of the short-gap term (section 4) are zero in every valid timetable; they still rank invalid ones. The feasibility check requires at least as many exam days as the largest set of pairwise-conflicting exams, and the data generator sizes the calendar to `max(⌈1.2 × DSATUR colours⌉, clique + 1)` days.
 
 The validator reports each category separately, so the dashboard and the paper can show the breakdown.
 

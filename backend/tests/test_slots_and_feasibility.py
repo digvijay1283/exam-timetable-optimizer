@@ -3,6 +3,7 @@ from datetime import date
 
 import pytest
 
+from app.core.config import ConstraintParams
 from app.optimization.context import build_context
 from app.services.feasibility_service import check_feasibility
 from app.services.slot_service import generate_slots
@@ -79,13 +80,23 @@ def test_exam_longer_than_any_slot(tiny_dataset):
 
 def test_clique_larger_than_slot_count(tiny_dataset):
     # ST001 already takes E1 and E2; adding E3 makes all three exams pairwise conflicting.
+    no_h8 = ConstraintParams(one_exam_per_day=False)
     enrollments = tiny_dataset.enrollments + [("ST001", "E3")]
     three_slots = replace(tiny_dataset, enrollments=enrollments, slots=tiny_dataset.slots[:3])
-    assert check_feasibility(build_context(three_slots)).ok
+    assert check_feasibility(build_context(three_slots, params=no_h8)).ok
 
     two_slots = replace(three_slots, slots=tiny_dataset.slots[:2])
-    msgs = check_feasibility(build_context(two_slots)).messages()
+    msgs = check_feasibility(build_context(two_slots, params=no_h8)).messages()
     assert any("At least 3 slots are needed" in m for m in msgs)
+
+
+def test_clique_larger_than_day_count(tiny_dataset):
+    # Three pairwise-conflicting exams need three days when a student sits one exam per day.
+    enrollments = tiny_dataset.enrollments + [("ST001", "E3")]
+    ds = replace(tiny_dataset, enrollments=enrollments)  # 4 slots but only 2 days
+    msgs = check_feasibility(build_context(ds)).messages()
+    assert any("At least 3 exam days are needed" in m for m in msgs)
+    assert check_feasibility(build_context(ds, params=ConstraintParams(one_exam_per_day=False))).ok
 
 
 def test_more_exams_than_cells(tiny_dataset):

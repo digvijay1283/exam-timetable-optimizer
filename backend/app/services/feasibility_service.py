@@ -51,6 +51,14 @@ def check_feasibility(ctx: OptimizationContext) -> ValidationReport:
             f"but only {ctx.n_slots} slots are defined.",
         )
 
+    if ctx.params.one_exam_per_day and clique > ctx.n_days:
+        report.error(
+            FILE,
+            f"At least {clique} exam days are needed ({clique} exams share students pairwise and a "
+            f"student sits at most one exam per day) but the session has only {ctx.n_days} exam days. "
+            "Extend the session's last exam day, then regenerate the slots.",
+        )
+
     cells = ctx.n_slots * int(ctx.room_available.sum())
     if ctx.n_exams > cells:
         report.error(
@@ -66,5 +74,11 @@ def check_feasibility(ctx: OptimizationContext) -> ValidationReport:
                 FILE,
                 f"A greedy colouring needs {colors_needed} slots but only {ctx.n_slots} are defined; "
                 "a clash-free timetable may not exist.",
+            )
+        if ctx.params.one_exam_per_day and colors_needed > ctx.n_days:
+            report.warn(
+                FILE,
+                f"A greedy colouring needs {colors_needed} exam days but only {ctx.n_days} are available; "
+                "a timetable with at most one exam per student per day may not exist.",
             )
     return report

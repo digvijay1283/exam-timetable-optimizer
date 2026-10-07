@@ -1,0 +1,136 @@
+exam_id,subject_code,subject_name,department,semester,duration_minutes,student_count,exam_type,priority
+EXM0001,CE24PC04,Engineering Mathematics-II,Civil Engineering,2,180,16,theory,1
+EXM0002,CE24PC05,Engineering Mechanics,Civil Engineering,2,180,16,theory,1
+EXM0003,CE24PC06,Engineering Graphics,Civil Engineering,2,180,16,theory,1
+EXM0004,CE24PC07,Basic Electrical Engineering,Civil Engineering,2,180,16,theory,1
+EXM0005,CE24PC08,Engineering Chemistry,Civil Engineering,2,180,16,theory,1
+EXM0006,CE25PC09,Fluid Mechanics,Civil Engineering,4,180,15,theory,1
+EXM0007,CE25PC10,Structural Analysis-I,Civil Engineering,4,180,15,theory,1
+EXM0008,CE25PC11,Surveying-II,Civil Engineering,4,180,15,theory,1
+EXM0009,CE25PC12,Geotechnical Engineering-I,Civil Engineering,4,180,15,theory,1
+EXM0010,CE25VS02,Surveying Laboratory,Civil Engineering,4,120,15,practical,2
+EXM0011,CE26PC13,Design of Reinforced Concrete Structures,Civil Engineering,6,180,15,theory,1
+EXM0012,CE26PC14,Transportation Engineering-I,Civil Engineering,6,180,15,theory,1
+EXM0013,CE26PC15,Environmental Engineering-II,Civil Engineering,6,180,15,theory,1
+EXM0014,CE26PE01,Programme Elective-I,Civil Engineering,6,180,15,theory,1
+EXM0015,CE26VS04,Civil Engineering Laboratory,Civil Engineering,6,120,15,practical,2
+EXM0016,CO24PC04,Data Structures,Computer Engineering,2,180,61,theory,1
+EXM0017,CO24PC05,Object Oriented Programming,Computer Engineering,2,180,61,theory,1
+EXM0018,CO24PC06,Discrete Mathematics,Computer Engineering,2,180,61,theory,1
+EXM0019,CO24PC07,Computer Organization,Computer Engineering,2,180,61,theory,1
+EXM0020,CO24PC08,Web Technology,Computer Engineering,2,180,61,theory,1
+EXM0021,CO25PC09,Theory of Computation,Computer Engineering,4,180,61,theory,1
+EXM0022,CO25PC10,Database Management Systems,Computer Engineering,4,180,61,theory,1
+EXM0023,CO25PC11,Operating Systems,Computer Engineering,4,180,61,theory,1
+EXM0024,CO25PC12,Computer Networks,Computer Engineering,4,180,61,theory,1
+EXM0025,CO25VS02,DBMS Laboratory,Computer Engineering,4,120,61,practical,2
+EXM0026,CO26PC13,Design and Analysis of Algorithms,Computer Engineering,6,180,61,theory,1
+EXM0027,CO26PC14,Artificial Intelligence,Computer Engineering,6,180,61,theory,1
+EXM0028,CO26PC15,Software Engineering,Computer Engineering,6,180,61,theory,1
+EXM0029,CO26PE01,Programme Elective-I,Computer Engineering,6,180,61,theory,1
+EXM0030,CO26VS04,Full Stack Development-II,Computer Engineering,6,120,61,practical,2
+EXM0031,CR24PC04,Data Structures,Computer Engineering (Regional Language),2,180,16,theory,1
+EXM0032,CR24PC05,Object Oriented Programming,Computer Engineering (Regional Language),2,180,16,theory,1
+EXM0033,CR24PC06,Discrete Mathematics,Computer Engineering (Regional Language),2,180,16,theory,1
+EXM0034,CR24PC07,Computer Organization,Computer Engineering (Regional Language),2,180,16,theory,1
+EXM0035,CR24PC08,Web Technology,Computer Engineering (Regional Language),2,180,16,theory,1
+EXM0036,CR25PC09,Theory of Computation,Computer Engineering (Regional Language),4,180,15,theory,1
+EXM0037,CR25PC10,Database Management Systems,Computer Engineering (Regional Language),4,180,15,theory,1
+EXM0038,CR25PC11,Operating Systems,Computer Engineering (Regional Language),4,180,15,theory,1
+EXM0039,CR25PC12,Computer Networks,Computer Engineering (Regional Language),4,180,15,theory,1
+EXM0040,CR25VS02,DBMS Laboratory,Computer Engineering (Regional Language),4,120,15,practical,2
+EXM0041,CR26PC13,Design and Analysis of Algorithms,Computer Engineering (Regional Language),6,180,15,theory,1
+EXM0042,CR26PC14,Artificial Intelligence,Computer Engineering (Regional Language),6,180,15,theory,1
+EXM0043,CR26PC15,Software Engineering,Computer Engineering (Regional Language),6,180,15,theory,1
+EXM0044,CR26PE01,Programme Elective-I,Computer Engineering (Regional Language),6,180,15,theory,1
+EXM0045,CR26VS04,Full Stack Development-II,Computer Engineering (Regional Language),6,120,15,practical,2
+EXM0046,IT24PC04,Data Structures,Information Technology,2,180,31,theory,1
+EXM0047,IT24PC05,Object Oriented Programming,Information Technology,2,180,31,theory,1
+EXM0048,IT24PC06,Discrete Mathematics,Information Technology,2,180,31,theory,1
+EXM0049,IT24PC07,Computer Organization,Information Technology,2,180,31,theory,1
+EXM0050,IT24PC08,Web Technology,Information Technology,2,180,31,theory,1
+EXM0051,IT25PC09,Theory of Computation,Information Technology,4,180,30,theory,1
+EXM0052,IT25PC10,Database Management Systems,Information Technology,4,180,30,theory,1
+EXM0053,IT25PC11,Operating Systems,Information Technology,4,180,30,theory,1
+EXM0054,IT25PC12,Computer Networks,Information Technology,4,180,30,theory,1
+EXM0055,IT25VS02,Database Management Systems Laboratory,Information Technology,4,120,30,practical,2
+EXM0056,IT26PC13,Design and Analysis of Algorithms,Information Technology,6,180,30,theory,1
+EXM0057,IT26PC14,Cloud Computing,Information Technology,6,180,30,theory,1
+EXM0058,IT26PC15,Information Security,Information Technology,6,180,30,theory,1
+EXM0059,IT26PE01,Programme Elective-I,Information Technology,6,180,30,theory,1
+EXM0060,IT26VS04,Full Stack Development-II,Information Technology,6,120,30,practical,2
+EXM0061,ET24PC04,Electronic Devices and Circuits,Electronics and Telecommunication Engineering,2,180,46,theory,1
+EXM0062,ET24PC05,Digital Logic Design,Electronics and Telecommunication Engineering,2,180,46,theory,1
+EXM0063,ET24PC06,Signals and Systems,Electronics and Telecommunication Engineering,2,180,46,theory,1
+EXM0064,ET24PC07,Network Theory,Electronics and Telecommunication Engineering,2,180,46,theory,1
+EXM0065,ET24PC08,Microcontroller Fundamentals,Electronics and Telecommunication Engineering,2,180,46,theory,1
+EXM0066,ET25PC09,Analog Circuits,Electronics and Telecommunication Engineering,4,180,46,theory,1
+EXM0067,ET25PC10,Digital Communication,Electronics and Telecommunication Engineering,4,180,46,theory,1
+EXM0068,ET25PC11,Microprocessors and Microcontrollers,Electronics and Telecommunication Engineering,4,180,46,theory,1
+EXM0069,ET25PC12,Control Systems,Electronics and Telecommunication Engineering,4,180,46,theory,1
+EXM0070,ET25VS02,Digital Communication Laboratory,Electronics and Telecommunication Engineering,4,120,46,practical,2
+EXM0071,ET26PC13,Computer Communication Networks,Electronics and Telecommunication Engineering,6,180,45,theory,1
+EXM0072,ET26PC14,Embedded Systems,Electronics and Telecommunication Engineering,6,180,45,theory,1
+EXM0073,ET26PC15,Digital Signal Processing,Electronics and Telecommunication Engineering,6,180,45,theory,1
+EXM0074,ET26PE01,Programme Elective-I,Electronics and Telecommunication Engineering,6,180,45,theory,1
+EXM0075,ET26VS04,Embedded Systems Laboratory,Electronics and Telecommunication Engineering,6,120,45,practical,2
+EXM0076,ME24PC04,Engineering Mathematics-II,Mechanical Engineering,2,180,46,theory,1
+EXM0077,ME24PC05,Engineering Mechanics,Mechanical Engineering,2,180,46,theory,1
+EXM0078,ME24PC06,Manufacturing Processes,Mechanical Engineering,2,180,46,theory,1
+EXM0079,ME24PC07,Thermodynamics,Mechanical Engineering,2,180,46,theory,1
+EXM0080,ME24PC08,Material Science,Mechanical Engineering,2,180,46,theory,1
+EXM0081,ME25PC09,Fluid Mechanics,Mechanical Engineering,4,180,46,theory,1
+EXM0082,ME25PC10,Theory of Machines,Mechanical Engineering,4,180,46,theory,1
+EXM0083,ME25PC11,Heat Transfer,Mechanical Engineering,4,180,46,theory,1
+EXM0084,ME25PC12,Manufacturing Technology,Mechanical Engineering,4,180,46,theory,1
+EXM0085,ME25VS02,Machine Shop Laboratory,Mechanical Engineering,4,120,46,practical,2
+EXM0086,ME26PC13,Design of Machine Elements,Mechanical Engineering,6,180,45,theory,1
+EXM0087,ME26PC14,Numerical Methods and Optimization,Mechanical Engineering,6,180,45,theory,1
+EXM0088,ME26PC15,Metrology and Quality Control,Mechanical Engineering,6,180,45,theory,1
+EXM0089,ME26PE01,Programme Elective-II,Mechanical Engineering,6,180,45,theory,1
+EXM0090,ME26VS04,CAE Laboratory,Mechanical Engineering,6,120,45,practical,2
+EXM0091,AI24PC04,Data Structures,CSE (Artificial Intelligence and Machine Learning),2,180,31,theory,1
+EXM0092,AI24PC05,Object Oriented Programming,CSE (Artificial Intelligence and Machine Learning),2,180,31,theory,1
+EXM0093,AI24PC06,Discrete Mathematics,CSE (Artificial Intelligence and Machine Learning),2,180,31,theory,1
+EXM0094,AI24PC07,Computer Organization,CSE (Artificial Intelligence and Machine Learning),2,180,31,theory,1
+EXM0095,AI24PC08,Probability and Statistics,CSE (Artificial Intelligence and Machine Learning),2,180,31,theory,1
+EXM0096,AI25PC09,Theory of Computation,CSE (Artificial Intelligence and Machine Learning),4,180,30,theory,1
+EXM0097,AI25PC10,Database Management Systems,CSE (Artificial Intelligence and Machine Learning),4,180,30,theory,1
+EXM0098,AI25PC11,Operating Systems,CSE (Artificial Intelligence and Machine Learning),4,180,30,theory,1
+EXM0099,AI25PC12,Advanced Data Structures,CSE (Artificial Intelligence and Machine Learning),4,180,30,theory,1
+EXM0100,AI25VS02,Full Stack Development-I,CSE (Artificial Intelligence and Machine Learning),4,120,30,practical,2
+EXM0101,AI26PC14,Design and Analysis of Algorithms,CSE (Artificial Intelligence and Machine Learning),6,180,30,theory,1
+EXM0102,AI26PC15,Computer Vision,CSE (Artificial Intelligence and Machine Learning),6,180,30,theory,1
+EXM0103,AI26PC16,Deep Learning,CSE (Artificial Intelligence and Machine Learning),6,180,30,theory,1
+EXM0104,AI26PE01,Programme Elective-I,CSE (Artificial Intelligence and Machine Learning),6,180,30,theory,1
+EXM0105,AI26VS04,Full Stack Development-II,CSE (Artificial Intelligence and Machine Learning),6,120,30,practical,2
+EXM0106,VL24PC04,Electronic Devices,Electronics Engineering (VLSI Design & Technology),2,180,16,theory,1
+EXM0107,VL24PC05,Digital Electronics,Electronics Engineering (VLSI Design & Technology),2,180,16,theory,1
+EXM0108,VL24PC06,Network Theory,Electronics Engineering (VLSI Design & Technology),2,180,16,theory,1
+EXM0109,VL24PC07,Signals and Systems,Electronics Engineering (VLSI Design & Technology),2,180,16,theory,1
+EXM0110,VL24PC08,Electronic Measurements,Electronics Engineering (VLSI Design & Technology),2,180,16,theory,1
+EXM0111,VL25PC09,Analog Integrated Circuits,Electronics Engineering (VLSI Design & Technology),4,180,15,theory,1
+EXM0112,VL25PC10,Digital System Design,Electronics Engineering (VLSI Design & Technology),4,180,15,theory,1
+EXM0113,VL25PC11,Microcontrollers,Electronics Engineering (VLSI Design & Technology),4,180,15,theory,1
+EXM0114,VL25PC12,VLSI Design Fundamentals,Electronics Engineering (VLSI Design & Technology),4,180,15,theory,1
+EXM0115,VL25VS02,Digital Electronics Laboratory,Electronics Engineering (VLSI Design & Technology),4,120,15,practical,2
+EXM0116,VL26PC13,VLSI Technology,Electronics Engineering (VLSI Design & Technology),6,180,15,theory,1
+EXM0117,VL26PC14,Embedded Systems,Electronics Engineering (VLSI Design & Technology),6,180,15,theory,1
+EXM0118,VL26PC15,Digital Signal Processing,Electronics Engineering (VLSI Design & Technology),6,180,15,theory,1
+EXM0119,VL26PE01,Programme Elective-I,Electronics Engineering (VLSI Design & Technology),6,180,15,theory,1
+EXM0120,VL26VS04,VLSI Design Laboratory,Electronics Engineering (VLSI Design & Technology),6,120,15,practical,2
+EXM0121,CRL24PC04,Engineering Mathematics-II,Civil Engineering (Regional Language),2,180,8,theory,1
+EXM0122,CRL24PC05,Engineering Mechanics,Civil Engineering (Regional Language),2,180,8,theory,1
+EXM0123,CRL24PC06,Engineering Graphics,Civil Engineering (Regional Language),2,180,8,theory,1
+EXM0124,CRL24PC07,Basic Electrical Engineering,Civil Engineering (Regional Language),2,180,8,theory,1
+EXM0125,CRL24PC08,Engineering Chemistry,Civil Engineering (Regional Language),2,180,8,theory,1
+EXM0126,CRL25PC09,Fluid Mechanics,Civil Engineering (Regional Language),4,180,8,theory,1
+EXM0127,CRL25PC10,Structural Analysis-I,Civil Engineering (Regional Language),4,180,8,theory,1
+EXM0128,CRL25PC11,Surveying-II,Civil Engineering (Regional Language),4,180,8,theory,1
+EXM0129,CRL25PC12,Geotechnical Engineering-I,Civil Engineering (Regional Language),4,180,8,theory,1
+EXM0130,CRL25VS02,Surveying Laboratory,Civil Engineering (Regional Language),4,120,8,practical,2
+EXM0131,CRL26PC13,Design of Reinforced Concrete Structures,Civil Engineering (Regional Language),6,180,7,theory,1
+EXM0132,CRL26PC14,Transportation Engineering-I,Civil Engineering (Regional Language),6,180,7,theory,1
+EXM0133,CRL26PC15,Environmental Engineering-II,Civil Engineering (Regional Language),6,180,7,theory,1
+EXM0134,CRL26PE01,Programme Elective-I,Civil Engineering (Regional Language),6,180,7,theory,1
+EXM0135,CRL26VS04,Civil Engineering Laboratory,Civil Engineering (Regional Language),6,120,7,practical,2

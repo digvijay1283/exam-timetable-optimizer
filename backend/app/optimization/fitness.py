@@ -14,6 +14,7 @@ from app.optimization.constraints import (
     room_collisions,
     room_type_mismatches,
     room_utilization_penalty,
+    same_day_conflicts,
     short_gaps,
     slot_preference_penalty,
     student_clashes,
@@ -33,6 +34,7 @@ class Evaluation:
     unavailable_rooms: int
     room_type_mismatches: int
     duration_violations: int
+    same_day_conflicts: int
     # soft components (unweighted)
     consecutive: int
     short_gaps: int
@@ -72,7 +74,8 @@ def evaluate(ctx: OptimizationContext, slot: np.ndarray, room: np.ndarray) -> Ev
     unavailable = unavailable_rooms(ctx, slot, room, ok)
     mismatches = room_type_mismatches(ctx, slot, room, ok)
     too_long = duration_violations(ctx, slot, room, ok)
-    hard = clashes + collisions + capacity + missing + unavailable + mismatches + too_long
+    same_day = same_day_conflicts(ctx, slot, room, ok)
+    hard = clashes + collisions + capacity + missing + unavailable + mismatches + too_long + same_day
 
     consecutive = consecutive_conflicts(ctx, slot, room, ok)
     gaps = short_gaps(ctx, slot, room, ok)
@@ -97,6 +100,7 @@ def evaluate(ctx: OptimizationContext, slot: np.ndarray, room: np.ndarray) -> Ev
         unavailable_rooms=unavailable,
         room_type_mismatches=mismatches,
         duration_violations=too_long,
+        same_day_conflicts=same_day,
         consecutive=consecutive,
         short_gaps=gaps,
         distribution=spread,

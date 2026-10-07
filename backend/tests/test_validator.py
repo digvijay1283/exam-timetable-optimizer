@@ -2,7 +2,7 @@ from dataclasses import replace
 
 from app.optimization.validator import validate_timetable
 
-GOOD = [("E1", "S01", "R1"), ("E2", "S03", "R2"), ("E3", "S04", "R1")]
+GOOD = [("E1", "S01", "R1"), ("E2", "S03", "R2"), ("E3", "S02", "R1")]
 
 
 def test_valid_timetable_accepted(tiny_dataset):
@@ -65,3 +65,12 @@ def test_unavailable_room_type_and_duration(tiny_dataset):
     result = validate_timetable(replace(tiny_dataset, rooms=rooms, exams=exams), GOOD)
     assert (result.unavailable_rooms, result.room_type_mismatches, result.duration_violations) == (2, 1, 1)
     assert result.hard_violations == 4
+
+
+def test_two_exams_on_one_day_rejected_with_detail(tiny_dataset):
+    """E2 and E3 share 7 students and sit on the same day in different slots."""
+    same_day = [("E1", "S01", "R1"), ("E2", "S03", "R2"), ("E3", "S04", "R1")]
+    result = validate_timetable(tiny_dataset, same_day)
+    assert not result.valid and result.same_day_conflicts == 7 and result.student_conflicts == 0
+    assert any("same day (2026-11-24)" in d for d in result.details)
+    assert validate_timetable(tiny_dataset, same_day, one_exam_per_day=False).valid
